@@ -101,12 +101,12 @@ export function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#070B14] text-white selection:bg-[#F59E0B] selection:text-black font-body relative overflow-x-hidden flex flex-col justify-between">
+    <div className="min-h-screen bg-[#090514] text-white selection:bg-[#A855F7] selection:text-white font-body relative overflow-x-hidden flex flex-col justify-between">
       {/* Pure White Starfield & Constellation Canvas */}
       <ParticleBackground />
 
       {/* Smooth Cursor Spotlight Interaction */}
-      <SpotlightGlow glowColor="rgba(245, 158, 11, 0.08)" />
+      <SpotlightGlow glowColor="rgba(168, 85, 247, 0.08)" />
 
       {/* Navigation Bar with Active Page Highlight */}
       <Navbar
@@ -129,7 +129,7 @@ export function App() {
               <section className="py-12 sm:py-16 relative">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                   <div className="text-center max-w-2xl mx-auto mb-10">
-                    <span className="text-xs font-bold tracking-widest text-[#F59E0B] uppercase font-heading">
+                    <span className="text-xs font-bold tracking-widest text-[#C084FC] uppercase font-heading">
                       DISCOVER MORE
                     </span>
                     <h2 className="text-2xl sm:text-3xl font-heading font-extrabold text-white mt-1">
@@ -141,20 +141,20 @@ export function App() {
                     {/* About Card */}
                     <div
                       onClick={() => navigateTo('about')}
-                      className="glow-card rounded-2xl p-7 flex flex-col justify-between group cursor-pointer hover:border-[#F59E0B]/60 transition-all duration-300"
+                      className="glow-card rounded-2xl p-7 flex flex-col justify-between group cursor-pointer hover:border-[#A855F7]/60 transition-all duration-300"
                     >
                       <div>
-                        <div className="w-12 h-12 rounded-xl bg-[#F59E0B]/10 border border-[#F59E0B]/30 flex items-center justify-center text-[#F59E0B] mb-5 group-hover:scale-110 transition-transform">
+                        <div className="w-12 h-12 rounded-xl bg-[#A855F7]/15 border border-[#A855F7]/35 flex items-center justify-center text-[#C084FC] mb-5 group-hover:scale-110 transition-transform">
                           <User size={22} />
                         </div>
-                        <h3 className="text-xl font-heading font-bold text-white mb-2 group-hover:text-[#FBBF24] transition-colors">
+                        <h3 className="text-xl font-heading font-bold text-white mb-2 group-hover:text-[#C084FC] transition-colors">
                           About Me
                         </h3>
-                        <p className="text-sm text-[#94A3B8] leading-relaxed">
+                        <p className="text-sm text-[#A78BFA]/80 leading-relaxed">
                           Discover my journey, background, and dedication to building modern, performant digital solutions.
                         </p>
                       </div>
-                      <div className="pt-6 mt-4 border-t border-[#1A243D]/50 flex items-center justify-between text-xs font-semibold text-[#F59E0B] group-hover:text-[#FBBF24] transition-colors">
+                      <div className="pt-6 mt-4 border-t border-[#2C1B4D]/60 flex items-center justify-between text-xs font-semibold text-[#C084FC] group-hover:text-white transition-colors">
                         <span>Read Biography</span>
                         <ArrowRight size={14} className="group-hover:translate-x-1.5 transition-transform" />
                       </div>
@@ -163,20 +163,20 @@ export function App() {
                     {/* Skills Card */}
                     <div
                       onClick={() => navigateTo('skills')}
-                      className="glow-card rounded-2xl p-7 flex flex-col justify-between group cursor-pointer hover:border-[#F59E0B]/60 transition-all duration-300"
+                      className="glow-card rounded-2xl p-7 flex flex-col justify-between group cursor-pointer hover:border-[#A855F7]/60 transition-all duration-300"
                     >
                       <div>
-                        <div className="w-12 h-12 rounded-xl bg-[#F59E0B]/10 border border-[#F59E0B]/30 flex items-center justify-center text-[#F59E0B] mb-5 group-hover:scale-110 transition-transform">
+                        <div className="w-12 h-12 rounded-xl bg-[#A855F7]/15 border border-[#A855F7]/35 flex items-center justify-center text-[#C084FC] mb-5 group-hover:scale-110 transition-transform">
                           <Code2 size={22} />
                         </div>
-                        <h3 className="text-xl font-heading font-bold text-white mb-2 group-hover:text-[#FBBF24] transition-colors">
+                        <h3 className="text-xl font-heading font-bold text-white mb-2 group-hover:text-[#C084FC] transition-colors">
                           Technical Skills
                         </h3>
-                        <p className="text-sm text-[#94A3B8] leading-relaxed">
+                        <p className="text-sm text-[#A78BFA]/80 leading-relaxed">
                           Explore my core tech stack: C, Java, Python, HTML, CSS, JavaScript, React.js, PHP, and MySQL.
                         </p>
                       </div>
-                      <div className="pt-6 mt-4 border-t border-[#1A243D]/50 flex items-center justify-between text-xs font-semibold text-[#F59E0B] group-hover:text-[#FBBF24] transition-colors">
+                      <div className="pt-6 mt-4 border-t border-[#2C1B4D]/60 flex items-center justify-between text-xs font-semibold text-[#C084FC] group-hover:text-white transition-colors">
                         <span>View 9 Skills</span>
                         <ArrowRight size={14} className="group-hover:translate-x-1.5 transition-transform" />
                       </div>
@@ -185,20 +185,20 @@ export function App() {
                     {/* Projects Card */}
                     <div
                       onClick={() => navigateTo('projects')}
-                      className="glow-card rounded-2xl p-7 flex flex-col justify-between group cursor-pointer hover:border-[#F59E0B]/60 transition-all duration-300"
+                      className="glow-card rounded-2xl p-7 flex flex-col justify-between group cursor-pointer hover:border-[#A855F7]/60 transition-all duration-300"
                     >
                       <div>
-                        <div className="w-12 h-12 rounded-xl bg-[#F59E0B]/10 border border-[#F59E0B]/30 flex items-center justify-center text-[#F59E0B] mb-5 group-hover:scale-110 transition-transform">
+                        <div className="w-12 h-12 rounded-xl bg-[#A855F7]/15 border border-[#A855F7]/35 flex items-center justify-center text-[#C084FC] mb-5 group-hover:scale-110 transition-transform">
                           <Briefcase size={22} />
                         </div>
-                        <h3 className="text-xl font-heading font-bold text-white mb-2 group-hover:text-[#FBBF24] transition-colors">
+                        <h3 className="text-xl font-heading font-bold text-white mb-2 group-hover:text-[#C084FC] transition-colors">
                           Projects Showcase
                         </h3>
-                        <p className="text-sm text-[#94A3B8] leading-relaxed">
+                        <p className="text-sm text-[#A78BFA]/80 leading-relaxed">
                           Browse full-stack websites, e-commerce stores, and UI/UX dashboards with live interactive details.
                         </p>
                       </div>
-                      <div className="pt-6 mt-4 border-t border-[#1A243D]/50 flex items-center justify-between text-xs font-semibold text-[#F59E0B] group-hover:text-[#FBBF24] transition-colors">
+                      <div className="pt-6 mt-4 border-t border-[#2C1B4D]/60 flex items-center justify-between text-xs font-semibold text-[#C084FC] group-hover:text-white transition-colors">
                         <span>Explore Projects</span>
                         <ArrowRight size={14} className="group-hover:translate-x-1.5 transition-transform" />
                       </div>

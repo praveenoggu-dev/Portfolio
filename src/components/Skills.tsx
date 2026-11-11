@@ -26,7 +26,7 @@ export const Skills: React.FC<SkillsProps> = ({ skills }) => {
       filtered.find((s) => s.name === name) || {
         name,
         icon: name.toLowerCase().replace(/[^a-z0-9]/g, ''),
-        color: '#F59E0B',
+        color: '#A855F7',
       }
   );
 
@@ -149,17 +149,17 @@ export const Skills: React.FC<SkillsProps> = ({ skills }) => {
   };
 
   return (
-    <section id="skills" className="pt-32 sm:pt-40 pb-24 relative bg-[#060B1A]/40 backdrop-blur-sm">
+    <section id="skills" className="pt-32 sm:pt-40 pb-24 relative bg-[#0A0618]/40 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-14">
-          <span className="text-xs font-bold tracking-widest text-[#F59E0B] uppercase font-heading">
+          <span className="text-xs font-bold tracking-widest text-[#C084FC] uppercase font-heading">
             TECHNICAL EXPERTISE
           </span>
           <h2 className="text-3xl sm:text-4xl font-heading font-extrabold text-white mt-2">
             My Skills
           </h2>
-          <p className="text-sm sm:text-base text-[#94A3B8] mt-3">
+          <p className="text-sm sm:text-base text-[#A78BFA] mt-3">
             Core programming languages, web technologies, and databases I work with.
           </p>
         </div>
@@ -172,12 +172,12 @@ export const Skills: React.FC<SkillsProps> = ({ skills }) => {
               className="glow-card rounded-2xl p-6 flex flex-col items-center justify-center text-center relative group hover:-translate-y-1.5 transition-all duration-300 min-h-[160px]"
             >
               {/* Skill Icon Container */}
-              <div className="w-16 h-16 rounded-2xl bg-[#080D1D] border border-[#1A243D] flex items-center justify-center mb-4 group-hover:border-[#F59E0B]/60 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(245,158,11,0.25)] transition-all shadow-inner">
+              <div className="w-16 h-16 rounded-2xl bg-[#150D2A] border border-[#2C1B4D] flex items-center justify-center mb-4 group-hover:border-[#A855F7]/60 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(168,85,247,0.3)] transition-all shadow-inner">
                 {renderSkillIcon(skill.name, skill.icon)}
               </div>
 
               {/* Skill Name */}
-              <h3 className="font-heading font-bold text-white text-base tracking-wide group-hover:text-[#FBBF24] transition-colors">
+              <h3 className="font-heading font-bold text-white text-base tracking-wide group-hover:text-[#C084FC] transition-colors">
                 {skill.name}
               </h3>
             </div>

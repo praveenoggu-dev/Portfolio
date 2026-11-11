@@ -21,7 +21,7 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
           <div>
-            <span className="text-xs font-bold tracking-widest text-[#F59E0B] uppercase font-heading">
+            <span className="text-xs font-bold tracking-widest text-[#C084FC] uppercase font-heading">
               MY SELECTED WORK
             </span>
             <h2 className="text-3xl sm:text-4xl font-heading font-extrabold text-white mt-2">
@@ -31,7 +31,7 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({
 
           <button
             onClick={onViewAllProjects}
-            className="inline-flex items-center gap-2 text-sm font-semibold text-[#F59E0B] hover:text-[#FBBF24] group transition-colors self-start sm:self-auto cursor-pointer"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-[#C084FC] hover:text-white group transition-colors self-start sm:self-auto cursor-pointer"
           >
             <span>View All Projects</span>
             <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
@@ -48,16 +48,16 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({
             >
               <div>
                 {/* Image Preview Box */}
-                <div className="relative aspect-[16/10] overflow-hidden bg-[#0A0F1E] border-b border-[#1A243D]">
+                <div className="relative aspect-[16/10] overflow-hidden bg-[#0A0714] border-b border-[#2C1B4D]">
                   <img
                     src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter brightness-95"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0E1528] via-transparent to-transparent opacity-60" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#150D2A] via-transparent to-transparent opacity-60" />
 
                   {/* Category Pill */}
-                  <span className="absolute top-4 right-4 px-3 py-1 rounded-full bg-[#070B14]/85 backdrop-blur-md text-[11px] font-semibold tracking-wide text-[#FDE68A] border border-[rgba(245,158,11,0.3)]">
+                  <span className="absolute top-4 right-4 px-3 py-1 rounded-full bg-[#090514]/85 backdrop-blur-md text-[11px] font-semibold tracking-wide text-[#E9D5FF] border border-[rgba(168,85,247,0.4)]">
                     {project.category}
                   </span>
                 </div>
@@ -69,14 +69,14 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="px-2.5 py-1 rounded-md bg-[#121A30] border border-[#1A243D] text-[11px] font-medium text-[#94A3B8]"
+                        className="px-2.5 py-1 rounded-md bg-[#1D123A] border border-[#2C1B4D] text-[11px] font-medium text-[#A78BFA]"
                       >
                         {tag}
                       </span>
                     ))}
                   </div>
 
-                  <h3 className="text-xl font-heading font-bold text-white group-hover:text-[#FBBF24] transition-colors mb-2">
+                  <h3 className="text-xl font-heading font-bold text-white group-hover:text-[#C084FC] transition-colors mb-2">
                     {project.title}
                   </h3>
 
@@ -87,7 +87,7 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({
               </div>
 
               {/* View Project Link at bottom */}
-              <div className="px-6 pb-6 pt-2 flex items-center gap-1.5 text-xs font-semibold text-[#F59E0B] group-hover:text-[#FBBF24]">
+              <div className="px-6 pb-6 pt-2 flex items-center gap-1.5 text-xs font-semibold text-[#C084FC] group-hover:text-white">
                 <span>View Project</span>
                 <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
               </div>

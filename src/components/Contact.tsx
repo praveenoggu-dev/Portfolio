@@ -34,12 +34,12 @@ export const Contact: React.FC<ContactProps> = ({ data, messagePreset }) => {
       setLoading(false);
       setSubmitted(true);
 
-      // Trigger Confetti effect
+      // Trigger Confetti effect in lavender palette
       confetti({
         particleCount: 100,
         spread: 70,
         origin: { y: 0.6 },
-        colors: ['#3882F6', '#60A5FA', '#38BDF8', '#FFFFFF'],
+        colors: ['#A855F7', '#C084FC', '#E9D5FF', '#FFFFFF'],
       });
 
       // Reset form after delay
@@ -52,19 +52,19 @@ export const Contact: React.FC<ContactProps> = ({ data, messagePreset }) => {
 
   return (
     <section id="contact" className="pt-32 sm:pt-40 pb-24 relative bg-transparent overflow-hidden">
-      {/* Background glow */}
-      <div className="absolute top-1/2 right-10 w-96 h-96 bg-[#3882F6]/10 rounded-full blur-[140px] pointer-events-none -z-10" />
+      {/* Background ambient lavender glow */}
+      <div className="absolute top-1/2 right-10 w-96 h-96 bg-[#A855F7]/15 rounded-full blur-[140px] pointer-events-none -z-10" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-left mb-14">
-          <span className="text-xs font-bold tracking-widest text-[#F59E0B] uppercase font-heading">
+          <span className="text-xs font-bold tracking-widest text-[#C084FC] uppercase font-heading">
             GET IN TOUCH
           </span>
           <h2 className="text-3xl sm:text-4xl font-heading font-extrabold text-white mt-2 mb-3">
             Contact Me
           </h2>
-          <p className="text-sm sm:text-base text-[#94A3B8] max-w-xl leading-relaxed">
+          <p className="text-sm sm:text-base text-[#A78BFA] max-w-xl leading-relaxed">
             Have a question or want to work together? Feel free to reach out. I'll get back to you as soon as possible.
           </p>
         </div>
@@ -75,14 +75,14 @@ export const Contact: React.FC<ContactProps> = ({ data, messagePreset }) => {
             <div className="space-y-6">
               {/* Email */}
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-[#0E1528] border border-[#1A243D] flex items-center justify-center text-[#F59E0B] shrink-0">
+                <div className="w-12 h-12 rounded-xl bg-[#150D2A] border border-[#2C1B4D] flex items-center justify-center text-[#C084FC] shrink-0">
                   <Mail size={20} />
                 </div>
                 <div className="min-w-0 flex-1">
-                  <div className="text-xs text-[#94A3B8] font-medium">Email</div>
+                  <div className="text-xs text-[#A78BFA] font-medium">Email</div>
                   <a
                     href={`mailto:${data.personal.email}`}
-                    className="text-sm sm:text-base font-semibold text-white hover:text-[#FBBF24] transition-colors break-all"
+                    className="text-sm sm:text-base font-semibold text-white hover:text-[#C084FC] transition-colors break-all"
                   >
                     {data.personal.email}
                   </a>
@@ -91,11 +91,11 @@ export const Contact: React.FC<ContactProps> = ({ data, messagePreset }) => {
 
               {/* Location */}
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-[#0E1528] border border-[#1A243D] flex items-center justify-center text-[#F59E0B] shrink-0">
+                <div className="w-12 h-12 rounded-xl bg-[#150D2A] border border-[#2C1B4D] flex items-center justify-center text-[#C084FC] shrink-0">
                   <MapPin size={20} />
                 </div>
                 <div>
-                  <div className="text-xs text-[#94A3B8] font-medium">Location</div>
+                  <div className="text-xs text-[#A78BFA] font-medium">Location</div>
                   <div className="text-sm sm:text-base font-semibold text-white">
                     {data.personal.location}
                   </div>
@@ -104,8 +104,8 @@ export const Contact: React.FC<ContactProps> = ({ data, messagePreset }) => {
             </div>
 
             {/* Follow Me Socials */}
-            <div className="pt-4 border-t border-[#1A243D]">
-              <div className="text-xs font-semibold tracking-wider text-[#94A3B8] uppercase mb-4">
+            <div className="pt-4 border-t border-[#2C1B4D]">
+              <div className="text-xs font-semibold tracking-wider text-[#A78BFA] uppercase mb-4">
                 Follow Me
               </div>
               <div className="flex items-center gap-3">
@@ -114,7 +114,7 @@ export const Contact: React.FC<ContactProps> = ({ data, messagePreset }) => {
                   target="_blank"
                   rel="noreferrer"
                   aria-label="GitHub"
-                  className="w-10 h-10 rounded-full bg-[#0E1528] border border-[#1A243D] flex items-center justify-center text-[#94A3B8] hover:text-white hover:border-[#F59E0B] hover:bg-[#131D36] hover:scale-110 transition-all"
+                  className="w-10 h-10 rounded-full bg-[#150D2A] border border-[#2C1B4D] flex items-center justify-center text-[#A78BFA] hover:text-white hover:border-[#A855F7] hover:bg-[#1D123A] hover:scale-110 transition-all"
                 >
                   <GithubIcon size={18} />
                 </a>
@@ -123,7 +123,7 @@ export const Contact: React.FC<ContactProps> = ({ data, messagePreset }) => {
                   target="_blank"
                   rel="noreferrer"
                   aria-label="LinkedIn"
-                  className="w-10 h-10 rounded-full bg-[#0E1528] border border-[#1A243D] flex items-center justify-center text-[#94A3B8] hover:text-white hover:border-[#F59E0B] hover:bg-[#131D36] hover:scale-110 transition-all"
+                  className="w-10 h-10 rounded-full bg-[#150D2A] border border-[#2C1B4D] flex items-center justify-center text-[#A78BFA] hover:text-white hover:border-[#A855F7] hover:bg-[#1D123A] hover:scale-110 transition-all"
                 >
                   <LinkedinIcon size={18} />
                 </a>
@@ -133,8 +133,8 @@ export const Contact: React.FC<ContactProps> = ({ data, messagePreset }) => {
 
           {/* Right Column: Neon Glow Mail Card & Interactive Form */}
           <div className="lg:col-span-7 relative">
-            {/* Glowing Amber Mail Icon Box on Top Right */}
-            <div className="absolute -top-10 -right-4 sm:-right-8 w-24 h-24 rounded-2xl bg-gradient-to-tr from-[#D97706] to-[#F59E0B] border border-[#FDE68A]/60 shadow-2xl shadow-[#F59E0B]/40 flex items-center justify-center text-white -rotate-6 z-10 pointer-events-none hidden sm:flex">
+            {/* Glowing Lavender Mail Icon Box on Top Right */}
+            <div className="absolute -top-10 -right-4 sm:-right-8 w-24 h-24 rounded-2xl bg-gradient-to-tr from-[#9333EA] to-[#A855F7] border border-[#E9D5FF]/60 shadow-2xl shadow-[#A855F7]/40 flex items-center justify-center text-white -rotate-6 z-10 pointer-events-none hidden sm:flex">
               <Mail size={38} className="animate-pulse" />
             </div>
 
@@ -145,20 +145,20 @@ export const Contact: React.FC<ContactProps> = ({ data, messagePreset }) => {
 
               {submitted ? (
                 <div className="py-12 flex flex-col items-center justify-center text-center space-y-4 animate-in fade-in zoom-in-95 duration-300">
-                  <div className="w-16 h-16 rounded-full bg-[#F59E0B]/20 border border-[#F59E0B] flex items-center justify-center text-[#FBBF24]">
+                  <div className="w-16 h-16 rounded-full bg-[#A855F7]/20 border border-[#A855F7] flex items-center justify-center text-[#C084FC]">
                     <CheckCircle2 size={36} />
                   </div>
                   <h4 className="text-xl font-heading font-bold text-white">
                     Thank You!
                   </h4>
-                  <p className="text-sm text-[#94A3B8] max-w-sm">
+                  <p className="text-sm text-[#A78BFA] max-w-sm">
                     Your message has been delivered. I will review it and get back to you shortly.
                   </p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div>
-                    <label className="block text-xs font-semibold text-[#94A3B8] uppercase tracking-wider mb-2">
+                    <label className="block text-xs font-semibold text-[#A78BFA] uppercase tracking-wider mb-2">
                       Name
                     </label>
                     <input
@@ -167,12 +167,12 @@ export const Contact: React.FC<ContactProps> = ({ data, messagePreset }) => {
                       placeholder="Your name"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl bg-[#080D1D] border border-[#1A243D] focus:border-[#F59E0B] focus:ring-1 focus:ring-[#F59E0B] text-white text-sm outline-none transition-all placeholder:text-[#475569]"
+                      className="w-full px-4 py-3 rounded-xl bg-[#0F0A1E] border border-[#2C1B4D] focus:border-[#A855F7] focus:ring-1 focus:ring-[#A855F7] text-white text-sm outline-none transition-all placeholder:text-[#6D5D8A]"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold text-[#94A3B8] uppercase tracking-wider mb-2">
+                    <label className="block text-xs font-semibold text-[#A78BFA] uppercase tracking-wider mb-2">
                       Email
                     </label>
                     <input
@@ -181,12 +181,12 @@ export const Contact: React.FC<ContactProps> = ({ data, messagePreset }) => {
                       placeholder="Your email"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl bg-[#080D1D] border border-[#1A243D] focus:border-[#F59E0B] focus:ring-1 focus:ring-[#F59E0B] text-white text-sm outline-none transition-all placeholder:text-[#475569]"
+                      className="w-full px-4 py-3 rounded-xl bg-[#0F0A1E] border border-[#2C1B4D] focus:border-[#A855F7] focus:ring-1 focus:ring-[#A855F7] text-white text-sm outline-none transition-all placeholder:text-[#6D5D8A]"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold text-[#94A3B8] uppercase tracking-wider mb-2">
+                    <label className="block text-xs font-semibold text-[#A78BFA] uppercase tracking-wider mb-2">
                       Message
                     </label>
                     <textarea
@@ -195,7 +195,7 @@ export const Contact: React.FC<ContactProps> = ({ data, messagePreset }) => {
                       placeholder="Tell me about your project..."
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl bg-[#080D1D] border border-[#1A243D] focus:border-[#F59E0B] focus:ring-1 focus:ring-[#F59E0B] text-white text-sm outline-none transition-all placeholder:text-[#475569] resize-none"
+                      className="w-full px-4 py-3 rounded-xl bg-[#0F0A1E] border border-[#2C1B4D] focus:border-[#A855F7] focus:ring-1 focus:ring-[#A855F7] text-white text-sm outline-none transition-all placeholder:text-[#6D5D8A] resize-none"
                     />
                   </div>
 

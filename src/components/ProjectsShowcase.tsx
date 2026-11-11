@@ -29,13 +29,13 @@ export const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="text-xs font-bold tracking-widest text-[#F59E0B] uppercase font-heading">
+          <span className="text-xs font-bold tracking-widest text-[#C084FC] uppercase font-heading">
             PORTFOLIO SHOWCASE
           </span>
           <h2 className="text-3xl sm:text-4xl font-heading font-extrabold text-white mt-2 mb-4">
             Projects
           </h2>
-          <p className="text-sm sm:text-base text-[#94A3B8] leading-relaxed">
+          <p className="text-sm sm:text-base text-[#A78BFA] leading-relaxed">
             Here are some of my recent projects. Each project is crafted with attention to detail and a focus on performance.
           </p>
         </div>
@@ -49,7 +49,7 @@ export const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({
               className={`px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
                 activeTab === tab
                   ? 'theme-btn-primary shadow-md'
-                  : 'bg-[#0E1528] text-[#94A3B8] hover:text-white border border-[#1A243D] hover:border-[#F59E0B]/40'
+                  : 'bg-[#150D2A] text-[#A78BFA] hover:text-white border border-[#2C1B4D] hover:border-[#A855F7]/50'
               }`}
             >
               {tab}
@@ -67,15 +67,15 @@ export const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({
             >
               <div>
                 {/* Image Preview Box */}
-                <div className="relative aspect-[16/10] overflow-hidden bg-[#0A0F1E] border-b border-[#1A243D]">
+                <div className="relative aspect-[16/10] overflow-hidden bg-[#0A0714] border-b border-[#2C1B4D]">
                   <img
                     src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter brightness-95"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0E1528] via-transparent to-transparent opacity-60" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#150D2A] via-transparent to-transparent opacity-60" />
 
-                  <span className="absolute top-4 right-4 px-3 py-1 rounded-full bg-[#070B14]/85 backdrop-blur-md text-[11px] font-semibold tracking-wide text-[#FDE68A] border border-[rgba(245,158,11,0.3)]">
+                  <span className="absolute top-4 right-4 px-3 py-1 rounded-full bg-[#090514]/85 backdrop-blur-md text-[11px] font-semibold tracking-wide text-[#E9D5FF] border border-[rgba(168,85,247,0.4)]">
                     {project.category}
                   </span>
                 </div>
@@ -87,14 +87,14 @@ export const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="px-2.5 py-1 rounded-md bg-[#121A30] border border-[#1A243D] text-[11px] font-medium text-[#94A3B8]"
+                        className="px-2.5 py-1 rounded-md bg-[#1D123A] border border-[#2C1B4D] text-[11px] font-medium text-[#A78BFA]"
                       >
                         {tag}
                       </span>
                     ))}
                   </div>
 
-                  <h3 className="text-lg font-heading font-bold text-white group-hover:text-[#FBBF24] transition-colors mb-2">
+                  <h3 className="text-lg font-heading font-bold text-white group-hover:text-[#C084FC] transition-colors mb-2">
                     {project.title}
                   </h3>
 
@@ -105,7 +105,7 @@ export const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({
               </div>
 
               {/* Bottom Action */}
-              <div className="px-6 pb-6 pt-2 flex items-center justify-between text-xs font-semibold text-[#F59E0B] group-hover:text-[#FBBF24]">
+              <div className="px-6 pb-6 pt-2 flex items-center justify-between text-xs font-semibold text-[#C084FC] group-hover:text-white">
                 <span className="flex items-center gap-1.5">
                   <span>View Details</span>
                   <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />

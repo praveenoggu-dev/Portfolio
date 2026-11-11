@@ -65,7 +65,7 @@ export const Hero: React.FC<HeroProps> = ({ data, onNavigate }) => {
 
               <button
                 onClick={handleContact}
-                className="inline-flex items-center px-8 py-4 rounded-full bg-[#0E1528]/80 hover:bg-[#131D36] border border-[#1A243D] hover:border-[#F59E0B]/60 text-white font-semibold text-sm sm:text-base tracking-wide hover:-translate-y-1 transition-all cursor-pointer backdrop-blur-md"
+                className="inline-flex items-center px-8 py-4 rounded-full bg-[#150D2A]/80 hover:bg-[#1D123A] border border-[#2C1B4D] hover:border-[#A855F7]/60 text-white font-semibold text-sm sm:text-base tracking-wide hover:-translate-y-1 transition-all cursor-pointer backdrop-blur-md"
               >
                 <span>Contact Me</span>
               </button>
@@ -78,7 +78,7 @@ export const Hero: React.FC<HeroProps> = ({ data, onNavigate }) => {
                 target="_blank"
                 rel="noreferrer"
                 aria-label="GitHub"
-                className="w-11 h-11 rounded-full bg-[#0E1528]/90 border border-[#1A243D] flex items-center justify-center text-[#94A3B8] hover:text-white hover:border-[#F59E0B] hover:bg-[#131D36] hover:scale-115 transition-all shadow-md"
+                className="w-11 h-11 rounded-full bg-[#150D2A]/90 border border-[#2C1B4D] flex items-center justify-center text-[#A78BFA] hover:text-white hover:border-[#A855F7] hover:bg-[#1D123A] hover:scale-115 transition-all shadow-md"
               >
                 <GithubIcon size={18} />
               </a>
@@ -87,7 +87,7 @@ export const Hero: React.FC<HeroProps> = ({ data, onNavigate }) => {
                 target="_blank"
                 rel="noreferrer"
                 aria-label="LinkedIn"
-                className="w-11 h-11 rounded-full bg-[#0E1528]/90 border border-[#1A243D] flex items-center justify-center text-[#94A3B8] hover:text-white hover:border-[#F59E0B] hover:bg-[#131D36] hover:scale-115 transition-all shadow-md"
+                className="w-11 h-11 rounded-full bg-[#150D2A]/90 border border-[#2C1B4D] flex items-center justify-center text-[#A78BFA] hover:text-white hover:border-[#A855F7] hover:bg-[#1D123A] hover:scale-115 transition-all shadow-md"
               >
                 <LinkedinIcon size={18} />
               </a>
@@ -97,28 +97,28 @@ export const Hero: React.FC<HeroProps> = ({ data, onNavigate }) => {
           {/* Right Visual Portrait with Floating Animations */}
           <div className="lg:col-span-5 flex justify-center lg:justify-end relative">
             <div className="relative w-72 sm:w-80 md:w-96 aspect-square flex items-center justify-center animate-float-slow">
-              {/* Warm Amber Glow Effect */}
+              {/* Vibrant Lavender Glow Effect */}
               <div
                 className="absolute inset-0 rounded-3xl blur-3xl -z-10 animate-pulse-glow"
                 style={{
-                  background: 'radial-gradient(circle, rgba(245, 158, 11, 0.35) 0%, transparent 70%)',
+                  background: 'radial-gradient(circle, rgba(168, 85, 247, 0.35) 0%, transparent 70%)',
                 }}
               />
 
               <div
                 className="absolute inset-2 rounded-3xl border backdrop-blur-md -rotate-3 transition-transform group-hover:rotate-0"
                 style={{
-                  borderColor: 'rgba(245, 158, 11, 0.45)',
-                  backgroundColor: 'rgba(14, 21, 40, 0.4)',
+                  borderColor: 'rgba(168, 85, 247, 0.45)',
+                  backgroundColor: 'rgba(21, 13, 42, 0.4)',
                 }}
               />
 
               {/* Developer Profile Card */}
               <div
-                className="relative w-full h-full rounded-3xl overflow-hidden border-2 shadow-2xl bg-[#0B101E]"
+                className="relative w-full h-full rounded-3xl overflow-hidden border-2 shadow-2xl bg-[#0F0A1E]"
                 style={{
-                  borderColor: '#F59E0B',
-                  boxShadow: '0 0 35px rgba(245, 158, 11, 0.2)',
+                  borderColor: '#A855F7',
+                  boxShadow: '0 0 35px rgba(168, 85, 247, 0.25)',
                 }}
               >
                 <img
@@ -127,15 +127,15 @@ export const Hero: React.FC<HeroProps> = ({ data, onNavigate }) => {
                   className="w-full h-full object-cover object-top filter brightness-100 contrast-105 hover:scale-105 transition-transform duration-700"
                 />
 
-                <div className="absolute inset-0 bg-gradient-to-t from-[#070B14] via-transparent to-transparent opacity-50" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#090514] via-transparent to-transparent opacity-50" />
               </div>
 
               {/* Floating Badge: Turning Ideas into Digital Reality */}
               <div
-                className="absolute -bottom-6 -left-6 sm:-left-10 z-20 px-5 py-3 rounded-2xl bg-[#0B101E]/95 backdrop-blur-xl border shadow-2xl shadow-black/60 hover:scale-105 transition-all animate-float"
-                style={{ borderColor: 'rgba(245, 158, 11, 0.5)' }}
+                className="absolute -bottom-6 -left-6 sm:-left-10 z-20 px-5 py-3 rounded-2xl bg-[#0F0A1E]/95 backdrop-blur-xl border shadow-2xl shadow-black/60 hover:scale-105 transition-all animate-float"
+                style={{ borderColor: 'rgba(168, 85, 247, 0.5)' }}
               >
-                <div className="text-[11px] font-semibold tracking-wider text-[#94A3B8] uppercase">
+                <div className="text-[11px] font-semibold tracking-wider text-[#C084FC] uppercase">
                   Turning Ideas
                 </div>
                 <div className="text-xs sm:text-sm font-bold text-white">

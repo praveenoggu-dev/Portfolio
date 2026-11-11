@@ -28,24 +28,24 @@ export const CustomizeModal: React.FC<CustomizeModalProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-md animate-in fade-in duration-200">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/85 backdrop-blur-md animate-in fade-in duration-200">
       <div
-        className="relative w-full max-w-2xl bg-[#0D152B] border border-[#1A2645] rounded-3xl overflow-hidden shadow-2xl flex flex-col max-h-[90vh]"
+        className="relative w-full max-w-2xl bg-[#130B26] border border-[#2C1B4D] rounded-3xl overflow-hidden shadow-2xl flex flex-col max-h-[90vh]"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="p-6 border-b border-[#1A2645] flex items-center justify-between">
+        <div className="p-6 border-b border-[#2C1B4D] flex items-center justify-between">
           <div>
             <h3 className="text-xl font-heading font-bold text-white">
               Customize Your Portfolio
             </h3>
-            <p className="text-xs text-[#94A3B8]">
+            <p className="text-xs text-[#A78BFA]">
               Easily update your personal information, role, contact info, and bio.
             </p>
           </div>
           <button
             onClick={onClose}
-            className="w-9 h-9 rounded-full bg-[#081028] text-[#94A3B8] hover:text-white border border-[#1A2645] flex items-center justify-center transition-all"
+            className="w-9 h-9 rounded-full bg-[#0F0A1E] text-[#A78BFA] hover:text-white border border-[#2C1B4D] flex items-center justify-center transition-all cursor-pointer"
           >
             <X size={18} />
           </button>
@@ -77,7 +77,7 @@ export const CustomizeModal: React.FC<CustomizeModalProps> = ({
                     },
                   })
                 }
-                className="w-full px-3.5 py-2.5 rounded-xl bg-[#081028] border border-[#1A2645] focus:border-[#3882F6] text-white text-sm outline-none"
+                className="w-full px-3.5 py-2.5 rounded-xl bg-[#0F0A1E] border border-[#2C1B4D] focus:border-[#A855F7] text-white text-sm outline-none"
               />
             </div>
 
@@ -94,7 +94,7 @@ export const CustomizeModal: React.FC<CustomizeModalProps> = ({
                     personal: { ...formData.personal, role: e.target.value },
                   })
                 }
-                className="w-full px-3.5 py-2.5 rounded-xl bg-[#081028] border border-[#1A2645] focus:border-[#3882F6] text-white text-sm outline-none"
+                className="w-full px-3.5 py-2.5 rounded-xl bg-[#0F0A1E] border border-[#2C1B4D] focus:border-[#A855F7] text-white text-sm outline-none"
               />
             </div>
           </div>
@@ -112,7 +112,7 @@ export const CustomizeModal: React.FC<CustomizeModalProps> = ({
                   personal: { ...formData.personal, bio: e.target.value },
                 })
               }
-              className="w-full px-3.5 py-2.5 rounded-xl bg-[#081028] border border-[#1A2645] focus:border-[#3882F6] text-white text-sm outline-none"
+              className="w-full px-3.5 py-2.5 rounded-xl bg-[#0F0A1E] border border-[#2C1B4D] focus:border-[#A855F7] text-white text-sm outline-none"
             />
           </div>
 
@@ -129,7 +129,7 @@ export const CustomizeModal: React.FC<CustomizeModalProps> = ({
                   personal: { ...formData.personal, aboutText: e.target.value },
                 })
               }
-              className="w-full px-3.5 py-2.5 rounded-xl bg-[#081028] border border-[#1A2645] focus:border-[#3882F6] text-white text-sm outline-none resize-none"
+              className="w-full px-3.5 py-2.5 rounded-xl bg-[#0F0A1E] border border-[#2C1B4D] focus:border-[#A855F7] text-white text-sm outline-none resize-none"
             />
           </div>
 
@@ -147,7 +147,7 @@ export const CustomizeModal: React.FC<CustomizeModalProps> = ({
                     personal: { ...formData.personal, email: e.target.value },
                   })
                 }
-                className="w-full px-3.5 py-2.5 rounded-xl bg-[#081028] border border-[#1A2645] focus:border-[#3882F6] text-white text-sm outline-none"
+                className="w-full px-3.5 py-2.5 rounded-xl bg-[#0F0A1E] border border-[#2C1B4D] focus:border-[#A855F7] text-white text-sm outline-none"
               />
             </div>
 
@@ -164,7 +164,7 @@ export const CustomizeModal: React.FC<CustomizeModalProps> = ({
                     personal: { ...formData.personal, location: e.target.value },
                   })
                 }
-                className="w-full px-3.5 py-2.5 rounded-xl bg-[#081028] border border-[#1A2645] focus:border-[#3882F6] text-white text-sm outline-none"
+                className="w-full px-3.5 py-2.5 rounded-xl bg-[#0F0A1E] border border-[#2C1B4D] focus:border-[#A855F7] text-white text-sm outline-none"
               />
             </div>
           </div>
@@ -183,7 +183,7 @@ export const CustomizeModal: React.FC<CustomizeModalProps> = ({
                     personal: { ...formData.personal, experience: e.target.value },
                   })
                 }
-                className="w-full px-3.5 py-2.5 rounded-xl bg-[#081028] border border-[#1A2645] focus:border-[#3882F6] text-white text-sm outline-none"
+                className="w-full px-3.5 py-2.5 rounded-xl bg-[#0F0A1E] border border-[#2C1B4D] focus:border-[#A855F7] text-white text-sm outline-none"
               />
             </div>
 
@@ -200,7 +200,7 @@ export const CustomizeModal: React.FC<CustomizeModalProps> = ({
                     personal: { ...formData.personal, heroImage: e.target.value },
                   })
                 }
-                className="w-full px-3.5 py-2.5 rounded-xl bg-[#081028] border border-[#1A2645] focus:border-[#3882F6] text-white text-sm outline-none"
+                className="w-full px-3.5 py-2.5 rounded-xl bg-[#0F0A1E] border border-[#2C1B4D] focus:border-[#A855F7] text-white text-sm outline-none"
               />
             </div>
           </div>
@@ -222,7 +222,7 @@ export const CustomizeModal: React.FC<CustomizeModalProps> = ({
                     },
                   })
                 }
-                className="w-full px-3.5 py-2.5 rounded-xl bg-[#081028] border border-[#1A2645] focus:border-[#3882F6] text-white text-sm outline-none"
+                className="w-full px-3.5 py-2.5 rounded-xl bg-[#0F0A1E] border border-[#2C1B4D] focus:border-[#A855F7] text-white text-sm outline-none"
               />
             </div>
 
@@ -242,20 +242,20 @@ export const CustomizeModal: React.FC<CustomizeModalProps> = ({
                     },
                   })
                 }
-                className="w-full px-3.5 py-2.5 rounded-xl bg-[#081028] border border-[#1A2645] focus:border-[#3882F6] text-white text-sm outline-none"
+                className="w-full px-3.5 py-2.5 rounded-xl bg-[#0F0A1E] border border-[#2C1B4D] focus:border-[#A855F7] text-white text-sm outline-none"
               />
             </div>
           </div>
 
           {/* Footer Actions */}
-          <div className="pt-4 border-t border-[#1A2645] flex items-center justify-between">
+          <div className="pt-4 border-t border-[#2C1B4D] flex items-center justify-between">
             <button
               type="button"
               onClick={() => {
                 onReset();
                 setFormData(initialPortfolioData);
               }}
-              className="flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold text-[#EF4444] hover:bg-[#EF4444]/10 transition-colors"
+              className="flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold text-[#EF4444] hover:bg-[#EF4444]/10 transition-colors cursor-pointer"
             >
               <RotateCcw size={14} />
               <span>Reset Defaults</span>
@@ -265,13 +265,13 @@ export const CustomizeModal: React.FC<CustomizeModalProps> = ({
               <button
                 type="button"
                 onClick={onClose}
-                className="px-5 py-2.5 rounded-xl bg-[#081028] border border-[#1A2645] text-white text-xs font-semibold hover:bg-[#141F42] transition-colors"
+                className="px-5 py-2.5 rounded-xl bg-[#0F0A1E] border border-[#2C1B4D] text-white text-xs font-semibold hover:bg-[#1D123A] transition-colors cursor-pointer"
               >
                 Cancel
               </button>
               <button
                 type="submit"
-                className="flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#3882F6] hover:bg-[#2563EB] text-white text-xs font-semibold transition-all shadow-md shadow-[#3882F6]/30"
+                className="flex items-center gap-2 px-6 py-2.5 rounded-xl bg-gradient-to-r from-[#9333EA] to-[#A855F7] text-white text-xs font-semibold transition-all shadow-md shadow-[#A855F7]/30 hover:opacity-95 cursor-pointer"
               >
                 <Save size={14} />
                 <span>Save Changes</span>
