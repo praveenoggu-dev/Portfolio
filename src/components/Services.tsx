@@ -24,7 +24,7 @@ export const Services: React.FC<ServicesProps> = ({ services, onSelectService })
   };
 
   return (
-    <section id="services" className="py-24 relative bg-[#060B1A]/40 backdrop-blur-sm">
+    <section id="services" className="pt-32 sm:pt-40 pb-24 relative bg-[#060B1A]/40 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-left mb-14">

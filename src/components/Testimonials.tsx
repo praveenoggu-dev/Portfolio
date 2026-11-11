@@ -8,7 +8,7 @@ interface TestimonialsProps {
 
 export const Testimonials: React.FC<TestimonialsProps> = ({ testimonials }) => {
   return (
-    <section id="testimonials" className="py-24 relative bg-[#060B1A]/40 backdrop-blur-sm">
+    <section id="testimonials" className="pt-32 sm:pt-40 pb-24 relative bg-[#060B1A]/40 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-14 gap-4">

@@ -149,7 +149,7 @@ export const Skills: React.FC<SkillsProps> = ({ skills }) => {
   };
 
   return (
-    <section id="skills" className="py-24 relative bg-[#060B1A]/40 backdrop-blur-sm">
+    <section id="skills" className="pt-32 sm:pt-40 pb-24 relative bg-[#060B1A]/40 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-14">

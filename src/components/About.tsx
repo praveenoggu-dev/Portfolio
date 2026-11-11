@@ -9,7 +9,7 @@ interface AboutProps {
 
 export const About: React.FC<AboutProps> = ({ data, onDownloadCV }) => {
   return (
-    <section id="about" className="py-24 relative bg-transparent overflow-hidden">
+    <section id="about" className="pt-32 sm:pt-40 pb-24 relative bg-transparent overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Text & Info */}

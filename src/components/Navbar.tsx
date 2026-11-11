@@ -4,12 +4,16 @@ import { PortfolioData } from '../data/portfolioData';
 
 interface NavbarProps {
   data: PortfolioData;
+  currentPage: string;
+  onNavigate: (page: string) => void;
   onOpenCustomize: () => void;
   onDownloadCV: () => void;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
   data,
+  currentPage,
+  onNavigate,
   onOpenCustomize,
   onDownloadCV,
 }) => {
@@ -25,36 +29,33 @@ export const Navbar: React.FC<NavbarProps> = ({
   }, []);
 
   const navLinks = [
-    { label: 'Home', href: '#home' },
-    { label: 'About', href: '#about' },
-    { label: 'Services', href: '#services' },
-    { label: 'Projects', href: '#projects' },
-    { label: 'Testimonials', href: '#testimonials' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'Home', page: 'home' },
+    { label: 'About', page: 'about' },
+    { label: 'Skills', page: 'skills' },
+    { label: 'Services', page: 'services' },
+    { label: 'Projects', page: 'projects' },
+    { label: 'Testimonials', page: 'testimonials' },
+    { label: 'Contact', page: 'contact' },
   ];
 
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault();
+  const handleLinkClick = (page: string) => {
     setMobileMenuOpen(false);
-    const target = document.querySelector(href);
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
-    }
+    onNavigate(page);
   };
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-[#070B14]/90 backdrop-blur-md border-b border-[#1A243D] py-3.5 shadow-xl shadow-black/40'
-          : 'bg-transparent py-5'
+          ? 'bg-[#070B14]/95 backdrop-blur-md border-b border-[#1A243D] py-3.5 shadow-xl shadow-black/50'
+          : 'bg-[#070B14]/80 backdrop-blur-sm py-4 border-b border-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Monogram Logo */}
-        <a
-          href="#home"
-          className="flex items-center gap-3 group focus:outline-none"
+        <button
+          onClick={() => handleLinkClick('home')}
+          className="flex items-center gap-3 group focus:outline-none cursor-pointer"
         >
           <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#D97706] to-[#F59E0B] flex items-center justify-center font-heading font-extrabold text-white text-base tracking-tight shadow-md shadow-[#F59E0B]/25 group-hover:scale-105 transition-all">
             {data.personal.initials}
@@ -62,23 +63,49 @@ export const Navbar: React.FC<NavbarProps> = ({
           <span className="font-heading font-bold text-lg text-white tracking-wide group-hover:text-[#FBBF24] transition-colors">
             {data.personal.name}
           </span>
-        </a>
+        </button>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden md:flex items-center gap-7">
-          {navLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              onClick={(e) => handleNavClick(e, link.href)}
-              className="text-[#94A3B8] hover:text-white font-medium text-sm transition-colors relative py-1 hover:after:w-full after:w-0 after:h-0.5 after:bg-[#F59E0B] after:absolute after:bottom-0 after:left-0 after:transition-all after:duration-300"
-            >
-              {link.label}
-            </a>
-          ))}
+        <nav className="hidden lg:flex items-center gap-1.5 bg-[#0B101E]/80 p-1.5 rounded-full border border-[#1A243D]">
+          {navLinks.map((link) => {
+            const isActive = currentPage === link.page;
+            return (
+              <button
+                key={link.page}
+                onClick={() => handleLinkClick(link.page)}
+                className={`px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide transition-all cursor-pointer ${
+                  isActive
+                    ? 'bg-gradient-to-r from-[#D97706] to-[#F59E0B] text-white shadow-md shadow-[#F59E0B]/30'
+                    : 'text-[#94A3B8] hover:text-white hover:bg-[#131D36]'
+                }`}
+              >
+                {link.label}
+              </button>
+            );
+          })}
         </nav>
 
-        {/* CTA and Customizer Actions (No color selector dropdown!) */}
+        {/* Medium Screen Nav (for tablet 768px - 1024px) */}
+        <nav className="hidden md:flex lg:hidden items-center gap-4">
+          {navLinks.slice(0, 5).map((link) => {
+            const isActive = currentPage === link.page;
+            return (
+              <button
+                key={link.page}
+                onClick={() => handleLinkClick(link.page)}
+                className={`text-xs font-semibold py-1 transition-colors cursor-pointer ${
+                  isActive
+                    ? 'text-[#F59E0B] border-b-2 border-[#F59E0B]'
+                    : 'text-[#94A3B8] hover:text-white'
+                }`}
+              >
+                {link.label}
+              </button>
+            );
+          })}
+        </nav>
+
+        {/* CTA and Customizer Actions */}
         <div className="hidden md:flex items-center gap-3">
           <button
             onClick={onOpenCustomize}
@@ -90,9 +117,9 @@ export const Navbar: React.FC<NavbarProps> = ({
 
           <button
             onClick={onDownloadCV}
-            className="theme-btn-primary flex items-center gap-2 px-5 py-2.5 rounded-full text-white text-sm font-semibold tracking-wide hover:-translate-y-0.5 transition-all cursor-pointer"
+            className="theme-btn-primary flex items-center gap-2 px-5 py-2.5 rounded-full text-white text-xs font-semibold tracking-wide hover:-translate-y-0.5 transition-all cursor-pointer shadow-md"
           >
-            <Download size={15} />
+            <Download size={14} />
             <span>Download CV</span>
           </button>
         </div>
@@ -101,14 +128,14 @@ export const Navbar: React.FC<NavbarProps> = ({
         <div className="flex md:hidden items-center gap-2">
           <button
             onClick={onOpenCustomize}
-            className="p-2 rounded-lg text-[#94A3B8] hover:text-white bg-[#0E1528] border border-[#1A243D]"
+            className="p-2 rounded-lg text-[#94A3B8] hover:text-white bg-[#0E1528] border border-[#1A243D] cursor-pointer"
           >
             <SlidersHorizontal size={17} />
           </button>
 
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 rounded-lg text-white bg-[#0E1528] border border-[#1A243D] focus:outline-none"
+            className="p-2 rounded-lg text-white bg-[#0E1528] border border-[#1A243D] focus:outline-none cursor-pointer"
             aria-label="Toggle menu"
           >
             {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -118,27 +145,36 @@ export const Navbar: React.FC<NavbarProps> = ({
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-[#0E1528]/95 backdrop-blur-xl border-b border-[#1A243D] px-6 py-5 shadow-2xl animate-in slide-in-from-top duration-200">
-          <div className="flex flex-col gap-4">
-            {navLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                onClick={(e) => handleNavClick(e, link.href)}
-                className="text-[#94A3B8] hover:text-white font-medium text-base py-1 transition-colors"
-              >
-                {link.label}
-              </a>
-            ))}
-            <div className="pt-3 border-t border-[#1A243D] flex flex-col gap-3">
+        <div className="md:hidden bg-[#0E1528]/98 backdrop-blur-2xl border-b border-[#1A243D] px-6 py-5 shadow-2xl animate-in slide-in-from-top duration-200">
+          <div className="flex flex-col gap-2">
+            {navLinks.map((link) => {
+              const isActive = currentPage === link.page;
+              return (
+                <button
+                  key={link.page}
+                  onClick={() => handleLinkClick(link.page)}
+                  className={`flex items-center justify-between text-left font-medium text-sm py-2.5 px-3.5 rounded-xl transition-colors cursor-pointer ${
+                    isActive
+                      ? 'text-white bg-gradient-to-r from-[#D97706]/80 to-[#F59E0B]/80 font-bold shadow-md'
+                      : 'text-[#94A3B8] hover:text-white hover:bg-[#131D36]'
+                  }`}
+                >
+                  <span>{link.label}</span>
+                  {isActive && (
+                    <span className="w-2 h-2 rounded-full bg-white" />
+                  )}
+                </button>
+              );
+            })}
+            <div className="pt-3 mt-1 border-t border-[#1A243D] flex flex-col gap-3">
               <button
                 onClick={() => {
                   setMobileMenuOpen(false);
                   onDownloadCV();
                 }}
-                className="theme-btn-primary w-full flex items-center justify-center gap-2 py-3 rounded-full text-white font-semibold shadow-md"
+                className="theme-btn-primary w-full flex items-center justify-center gap-2 py-3 rounded-full text-white font-semibold text-sm shadow-md cursor-pointer"
               >
-                <Download size={17} />
+                <Download size={16} />
                 <span>Download CV</span>
               </button>
             </div>

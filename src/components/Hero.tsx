@@ -5,12 +5,26 @@ import { GithubIcon, LinkedinIcon } from './SocialIcons';
 
 interface HeroProps {
   data: PortfolioData;
+  onNavigate?: (page: string) => void;
 }
 
-export const Hero: React.FC<HeroProps> = ({ data }) => {
-  const scrollTo = (id: string) => {
-    const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
+export const Hero: React.FC<HeroProps> = ({ data, onNavigate }) => {
+  const handleViewWork = () => {
+    if (onNavigate) {
+      onNavigate('projects');
+    } else {
+      const el = document.getElementById('projects');
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleContact = () => {
+    if (onNavigate) {
+      onNavigate('contact');
+    } else {
+      const el = document.getElementById('contact');
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
@@ -42,7 +56,7 @@ export const Hero: React.FC<HeroProps> = ({ data }) => {
             {/* Action Buttons */}
             <div className="flex flex-wrap items-center gap-4 pt-2">
               <button
-                onClick={() => scrollTo('projects')}
+                onClick={handleViewWork}
                 className="theme-btn-primary inline-flex items-center gap-2.5 px-8 py-4 rounded-full font-semibold text-sm sm:text-base tracking-wide group cursor-pointer"
               >
                 <span>View My Work</span>
@@ -50,7 +64,7 @@ export const Hero: React.FC<HeroProps> = ({ data }) => {
               </button>
 
               <button
-                onClick={() => scrollTo('contact')}
+                onClick={handleContact}
                 className="inline-flex items-center px-8 py-4 rounded-full bg-[#0E1528]/80 hover:bg-[#131D36] border border-[#1A243D] hover:border-[#F59E0B]/60 text-white font-semibold text-sm sm:text-base tracking-wide hover:-translate-y-1 transition-all cursor-pointer backdrop-blur-md"
               >
                 <span>Contact Me</span>

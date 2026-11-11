@@ -51,7 +51,7 @@ export const Contact: React.FC<ContactProps> = ({ data, messagePreset }) => {
   };
 
   return (
-    <section id="contact" className="py-24 relative bg-transparent overflow-hidden">
+    <section id="contact" className="pt-32 sm:pt-40 pb-24 relative bg-transparent overflow-hidden">
       {/* Background glow */}
       <div className="absolute top-1/2 right-10 w-96 h-96 bg-[#3882F6]/10 rounded-full blur-[140px] pointer-events-none -z-10" />
 

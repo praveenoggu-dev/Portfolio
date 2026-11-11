@@ -1,12 +1,11 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 
-export const CallToAction: React.FC = () => {
-  const scrollToContact = () => {
-    const el = document.getElementById('contact');
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
-  };
+interface CallToActionProps {
+  onContactClick?: () => void;
+}
 
+export const CallToAction: React.FC<CallToActionProps> = ({ onContactClick }) => {
   return (
     <section className="relative py-24 sm:py-28 overflow-hidden">
       {/* Background with Mountain Silhouette & Twilight Gradient */}
@@ -31,7 +30,7 @@ export const CallToAction: React.FC = () => {
         </p>
 
         <button
-          onClick={scrollToContact}
+          onClick={onContactClick}
           className="theme-btn-primary inline-flex items-center gap-2.5 px-9 py-4 rounded-full font-bold text-base tracking-wide hover:-translate-y-1 transition-all group cursor-pointer"
         >
           <span>Get In Touch</span>
@@ -41,4 +40,3 @@ export const CallToAction: React.FC = () => {
     </section>
   );
 };
-
