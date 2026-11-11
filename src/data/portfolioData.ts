@@ -12,8 +12,8 @@ export interface Project {
 
 export interface Skill {
   name: string;
-  level: number;
-  category: 'core' | 'frontend' | 'backend' | 'database';
+  level?: number;
+  category?: 'core' | 'frontend' | 'backend' | 'database';
   icon: string;
   color: string;
 }
@@ -87,17 +87,12 @@ export const initialPortfolioData: PortfolioData = {
     },
   },
   skills: [
-    { name: 'HTML', level: 95, category: 'core', icon: 'html5', color: '#E34F26' },
-    { name: 'CSS', level: 90, category: 'core', icon: 'css3', color: '#1572B6' },
-    { name: 'JavaScript', level: 85, category: 'core', icon: 'javascript', color: '#F7DF1E' },
-    { name: 'PHP', level: 80, category: 'core', icon: 'php', color: '#777BB4' },
-    { name: 'MySQL', level: 75, category: 'core', icon: 'mysql', color: '#4479A1' },
-    // Fullstack expansion
-    { name: 'React.js', level: 92, category: 'frontend', icon: 'react', color: '#61DAFB' },
-    { name: 'Node.js', level: 88, category: 'backend', icon: 'nodejs', color: '#339933' },
-    { name: 'TypeScript', level: 86, category: 'frontend', icon: 'typescript', color: '#3178C6' },
-    { name: 'Tailwind CSS', level: 94, category: 'frontend', icon: 'tailwind', color: '#06B6D4' },
-    { name: 'MongoDB', level: 82, category: 'database', icon: 'mongodb', color: '#47A248' },
+    { name: 'HTML', category: 'core', icon: 'html5', color: '#E34F26' },
+    { name: 'CSS', category: 'core', icon: 'css3', color: '#1572B6' },
+    { name: 'JavaScript', category: 'core', icon: 'javascript', color: '#F7DF1E' },
+    { name: 'React.js', category: 'frontend', icon: 'react', color: '#61DAFB' },
+    { name: 'PHP', category: 'core', icon: 'php', color: '#777BB4' },
+    { name: 'MySQL', category: 'core', icon: 'mysql', color: '#4479A1' },
   ],
   projects: [
     {

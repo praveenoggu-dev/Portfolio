@@ -22,7 +22,7 @@ ${data.personal.aboutText}
 -----------------------------------------------------------
 TECHNICAL SKILLS
 -----------------------------------------------------------
-${data.skills.map(s => `- ${s.name}: ${s.level}% proficiency`).join('\n')}
+${data.skills.map(s => `- ${s.name}`).join('\n')}
 
 -----------------------------------------------------------
 FEATURED PROJECTS
