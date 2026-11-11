@@ -1,7 +1,7 @@
 import React from 'react';
-import { ArrowRight, Code2, Sparkles } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { PortfolioData } from '../data/portfolioData';
-import { GithubIcon, LinkedinIcon, InstagramIcon } from './SocialIcons';
+import { GithubIcon, LinkedinIcon } from './SocialIcons';
 
 interface HeroProps {
   data: PortfolioData;
@@ -19,18 +19,6 @@ export const Hero: React.FC<HeroProps> = ({ data }) => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           {/* Left Text Column */}
           <div className="lg:col-span-7 flex flex-col items-start space-y-6">
-            {/* Welcome Tag */}
-            <div
-              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#0E1528]/90 text-xs font-semibold tracking-wider uppercase backdrop-blur-md shadow-lg"
-              style={{
-                border: '1px solid rgba(245, 158, 11, 0.4)',
-                boxShadow: '0 0 15px rgba(245, 158, 11, 0.15)',
-              }}
-            >
-              <span className="w-2 h-2 rounded-full bg-[#F59E0B] animate-ping" />
-              <span className="text-[#FDE68A]">{data.personal.badge}</span>
-            </div>
-
             {/* Main Headline */}
             <div className="space-y-3">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-extrabold text-white leading-tight tracking-tight">
@@ -89,15 +77,6 @@ export const Hero: React.FC<HeroProps> = ({ data }) => {
               >
                 <LinkedinIcon size={18} />
               </a>
-              <a
-                href={data.personal.social.instagram}
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Instagram"
-                className="w-11 h-11 rounded-full bg-[#0E1528]/90 border border-[#1A243D] flex items-center justify-center text-[#94A3B8] hover:text-white hover:border-[#F59E0B] hover:bg-[#131D36] hover:scale-115 transition-all shadow-md"
-              >
-                <InstagramIcon size={18} />
-              </a>
             </div>
           </div>
 
@@ -137,22 +116,16 @@ export const Hero: React.FC<HeroProps> = ({ data }) => {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#070B14] via-transparent to-transparent opacity-50" />
               </div>
 
-              {/* Floating Badge: </> Turning Ideas into Digital Reality */}
+              {/* Floating Badge: Turning Ideas into Digital Reality */}
               <div
-                className="absolute -bottom-6 -left-6 sm:-left-10 z-20 flex items-center gap-3 px-5 py-3.5 rounded-2xl bg-[#0B101E]/95 backdrop-blur-xl border shadow-2xl shadow-black/60 hover:scale-105 transition-all animate-float"
+                className="absolute -bottom-6 -left-6 sm:-left-10 z-20 px-5 py-3 rounded-2xl bg-[#0B101E]/95 backdrop-blur-xl border shadow-2xl shadow-black/60 hover:scale-105 transition-all animate-float"
                 style={{ borderColor: 'rgba(245, 158, 11, 0.5)' }}
               >
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#D97706] to-[#F59E0B] flex items-center justify-center text-white shadow-md shadow-[#F59E0B]/30">
-                  <Code2 size={20} />
+                <div className="text-[11px] font-semibold tracking-wider text-[#94A3B8] uppercase">
+                  Turning Ideas
                 </div>
-                <div>
-                  <div className="text-[11px] font-semibold tracking-wider text-[#94A3B8] uppercase">
-                    Turning Ideas
-                  </div>
-                  <div className="text-xs sm:text-sm font-bold text-white flex items-center gap-1.5">
-                    <span>Into Digital Reality</span>
-                    <Sparkles size={13} className="text-[#FBBF24]" />
-                  </div>
+                <div className="text-xs sm:text-sm font-bold text-white">
+                  Into Digital Reality
                 </div>
               </div>
             </div>

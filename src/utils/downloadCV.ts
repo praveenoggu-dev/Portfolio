@@ -9,7 +9,6 @@ export const generateAndDownloadCV = (data: PortfolioData) => {
 
 Contact Information:
 - Email: ${data.personal.email}
-- Phone: ${data.personal.phone}
 - Location: ${data.personal.location}
 - GitHub: ${data.personal.social.github}
 - LinkedIn: ${data.personal.social.linkedin}

@@ -29,7 +29,9 @@ export function App() {
           parsed?.personal?.heroImage?.includes('unsplash') ||
           parsed?.personal?.email?.includes('example.com') ||
           parsed?.personal?.social?.linkedin === 'https://linkedin.com' ||
-          parsed?.personal?.social?.instagram === 'https://instagram.com'
+          !parsed?.skills?.some((s: any) => s.name === 'Python') ||
+          parsed?.services?.some((s: any) => s.id === 'mobile-app') ||
+          parsed?.projects?.some((p: any) => p.category === 'Mobile Apps')
         ) {
           return initialPortfolioData;
         }

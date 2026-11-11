@@ -133,7 +133,7 @@ export const CustomizeModal: React.FC<CustomizeModalProps> = ({
             />
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label className="block text-xs font-semibold text-[#94A3B8] uppercase mb-1">
                 Email
@@ -145,23 +145,6 @@ export const CustomizeModal: React.FC<CustomizeModalProps> = ({
                   setFormData({
                     ...formData,
                     personal: { ...formData.personal, email: e.target.value },
-                  })
-                }
-                className="w-full px-3.5 py-2.5 rounded-xl bg-[#081028] border border-[#1A2645] focus:border-[#3882F6] text-white text-sm outline-none"
-              />
-            </div>
-
-            <div>
-              <label className="block text-xs font-semibold text-[#94A3B8] uppercase mb-1">
-                Phone
-              </label>
-              <input
-                type="text"
-                value={formData.personal.phone}
-                onChange={(e) =>
-                  setFormData({
-                    ...formData,
-                    personal: { ...formData.personal, phone: e.target.value },
                   })
                 }
                 className="w-full px-3.5 py-2.5 rounded-xl bg-[#081028] border border-[#1A2645] focus:border-[#3882F6] text-white text-sm outline-none"
@@ -256,26 +239,6 @@ export const CustomizeModal: React.FC<CustomizeModalProps> = ({
                     personal: {
                       ...formData.personal,
                       social: { ...formData.personal.social, github: e.target.value },
-                    },
-                  })
-                }
-                className="w-full px-3.5 py-2.5 rounded-xl bg-[#081028] border border-[#1A2645] focus:border-[#3882F6] text-white text-sm outline-none"
-              />
-            </div>
-
-            <div>
-              <label className="block text-xs font-semibold text-[#94A3B8] uppercase mb-1">
-                Instagram Profile URL
-              </label>
-              <input
-                type="text"
-                value={formData.personal.social.instagram}
-                onChange={(e) =>
-                  setFormData({
-                    ...formData,
-                    personal: {
-                      ...formData.personal,
-                      social: { ...formData.personal.social, instagram: e.target.value },
                     },
                   })
                 }

@@ -2,7 +2,7 @@ export interface Project {
   id: string;
   title: string;
   description: string;
-  category: 'Websites' | 'Mobile Apps' | 'UI/UX';
+  category: 'Websites' | 'UI/UX';
   tags: string[];
   image: string;
   demoUrl?: string;
@@ -49,13 +49,13 @@ export interface PortfolioData {
     location: string;
     experience: string;
     email: string;
-    phone: string;
+    phone?: string;
     heroImage: string;
     workspaceImage: string;
     social: {
       github: string;
       linkedin: string;
-      instagram: string;
+      instagram?: string;
       twitter?: string;
     };
   };
@@ -77,22 +77,23 @@ export const initialPortfolioData: PortfolioData = {
     location: 'India',
     experience: 'Fresher / Student',
     email: 'praveenoggu3@gmail.com',
-    phone: '+91 96526 79953',
     heroImage: '/profile.jpg',
     workspaceImage: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1000&q=80',
     social: {
       github: 'https://github.com',
       linkedin: 'https://www.linkedin.com/in/oggu-praveen-942957449?utm_source=share_via&utm_content=profile&utm_medium=member_android',
-      instagram: 'https://www.instagram.com/_mr_praveen_45__?exln=MW4ybmJxOHNuNnNubA==',
     },
   },
   skills: [
+    { name: 'C', category: 'core', icon: 'c', color: '#A8B9CC' },
+    { name: 'Java', category: 'core', icon: 'java', color: '#EA2D2E' },
+    { name: 'Python', category: 'core', icon: 'python', color: '#3776AB' },
     { name: 'HTML', category: 'core', icon: 'html5', color: '#E34F26' },
     { name: 'CSS', category: 'core', icon: 'css3', color: '#1572B6' },
     { name: 'JavaScript', category: 'core', icon: 'javascript', color: '#F7DF1E' },
     { name: 'React.js', category: 'frontend', icon: 'react', color: '#61DAFB' },
     { name: 'PHP', category: 'core', icon: 'php', color: '#777BB4' },
-    { name: 'MySQL', category: 'core', icon: 'mysql', color: '#4479A1' },
+    { name: 'MySQL', category: 'core', icon: 'mysql', color: '#00758F' },
   ],
   projects: [
     {
@@ -108,10 +109,10 @@ export const initialPortfolioData: PortfolioData = {
     },
     {
       id: 'task-manager',
-      title: 'Task Manager App',
-      description: 'A mobile app to manage your tasks efficiently with a clean interface.',
-      category: 'Mobile Apps',
-      tags: ['Flutter', 'Dart', 'Firebase'],
+      title: 'Task Management Web App',
+      description: 'A responsive full-stack task management dashboard with real-time tracking and clean UI.',
+      category: 'Websites',
+      tags: ['React', 'JavaScript', 'Tailwind'],
       featured: true,
       image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80',
       demoUrl: 'https://example.com/demo-tasks',
@@ -151,15 +152,15 @@ export const initialPortfolioData: PortfolioData = {
       githubUrl: 'https://github.com/example/portfolio',
     },
     {
-      id: 'social-media-app',
-      title: 'Social Media App',
-      description: 'Real-time social mobile application with messaging, story feeds and interactive media sharing.',
-      category: 'Mobile Apps',
-      tags: ['Flutter', 'Dart', 'Firebase'],
+      id: 'blog-platform',
+      title: 'Full-Stack Blog & Content Platform',
+      description: 'Dynamic content management web system with secure authentication, database storage, and responsive UI.',
+      category: 'Websites',
+      tags: ['PHP', 'MySQL', 'JavaScript'],
       featured: false,
-      image: 'https://images.unsplash.com/photo-1616469829941-c7200edec809?auto=format&fit=crop&w=900&q=80',
-      demoUrl: 'https://example.com/demo-social',
-      githubUrl: 'https://github.com/example/social-media',
+      image: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=900&q=80',
+      demoUrl: 'https://example.com/demo-blog',
+      githubUrl: 'https://github.com/example/blog-platform',
     },
   ],
   services: [
@@ -190,20 +191,6 @@ export const initialPortfolioData: PortfolioData = {
         'Conversion-oriented web interfaces',
       ],
       technologies: ['Figma', 'Prototyping', 'Design Systems', 'Responsive UI', 'Wireframing'],
-    },
-    {
-      id: 'mobile-app',
-      title: 'Mobile App Development',
-      description: 'Cross-platform apps for iOS and Android.',
-      iconName: 'Smartphone',
-      features: [
-        'Single codebase cross-platform apps for iOS & Android',
-        'Native-level smooth 60fps animations & UI',
-        'Real-time cloud database & Firebase auth',
-        'Push notifications & offline state management',
-        'App store & play store readiness',
-      ],
-      technologies: ['Flutter', 'Dart', 'Firebase', 'State Management', 'REST APIs'],
     },
     {
       id: 'maintenance',

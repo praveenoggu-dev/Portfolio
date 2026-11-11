@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Mail, Phone, MapPin, Send, CheckCircle2 } from 'lucide-react';
+import { Mail, MapPin, Send, CheckCircle2 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { PortfolioData } from '../data/portfolioData';
-import { GithubIcon, LinkedinIcon, InstagramIcon } from './SocialIcons';
+import { GithubIcon, LinkedinIcon } from './SocialIcons';
 
 interface ContactProps {
   data: PortfolioData;
@@ -78,29 +78,13 @@ export const Contact: React.FC<ContactProps> = ({ data, messagePreset }) => {
                 <div className="w-12 h-12 rounded-xl bg-[#0E1528] border border-[#1A243D] flex items-center justify-center text-[#F59E0B] shrink-0">
                   <Mail size={20} />
                 </div>
-                <div>
+                <div className="min-w-0 flex-1">
                   <div className="text-xs text-[#94A3B8] font-medium">Email</div>
                   <a
                     href={`mailto:${data.personal.email}`}
-                    className="text-sm sm:text-base font-semibold text-white hover:text-[#FBBF24] transition-colors"
+                    className="text-sm sm:text-base font-semibold text-white hover:text-[#FBBF24] transition-colors break-all"
                   >
                     {data.personal.email}
-                  </a>
-                </div>
-              </div>
-
-              {/* Phone */}
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-[#0E1528] border border-[#1A243D] flex items-center justify-center text-[#F59E0B] shrink-0">
-                  <Phone size={20} />
-                </div>
-                <div>
-                  <div className="text-xs text-[#94A3B8] font-medium">Phone</div>
-                    <a
-                      href={`tel:${data.personal.phone.replace(/\s+/g, '')}`}
-                      className="text-sm sm:text-base font-semibold text-white hover:text-[#FBBF24] transition-colors"
-                    >
-                    {data.personal.phone}
                   </a>
                 </div>
               </div>
@@ -142,15 +126,6 @@ export const Contact: React.FC<ContactProps> = ({ data, messagePreset }) => {
                   className="w-10 h-10 rounded-full bg-[#0E1528] border border-[#1A243D] flex items-center justify-center text-[#94A3B8] hover:text-white hover:border-[#F59E0B] hover:bg-[#131D36] hover:scale-110 transition-all"
                 >
                   <LinkedinIcon size={18} />
-                </a>
-                <a
-                  href={data.personal.social.instagram}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="Instagram"
-                  className="w-10 h-10 rounded-full bg-[#0E1528] border border-[#1A243D] flex items-center justify-center text-[#94A3B8] hover:text-white hover:border-[#F59E0B] hover:bg-[#131D36] hover:scale-110 transition-all"
-                >
-                  <InstagramIcon size={18} />
                 </a>
               </div>
             </div>

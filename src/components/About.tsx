@@ -28,14 +28,14 @@ export const About: React.FC<AboutProps> = ({ data, onDownloadCV }) => {
             </p>
 
             {/* Quick Details Badges */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 py-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 py-2 w-full">
               <div className="p-4 rounded-xl bg-[#0E1528] border border-[#1A243D] flex items-center gap-3">
                 <div className="w-10 h-10 rounded-lg bg-[#F59E0B]/10 border border-[#F59E0B]/30 flex items-center justify-center text-[#F59E0B] shrink-0">
                   <MapPin size={18} />
                 </div>
                 <div>
                   <div className="text-[11px] text-[#94A3B8] uppercase font-semibold">Location</div>
-                  <div className="text-xs sm:text-sm font-bold text-white truncate">{data.personal.location}</div>
+                  <div className="text-xs sm:text-sm font-bold text-white">{data.personal.location}</div>
                 </div>
               </div>
 
@@ -49,13 +49,18 @@ export const About: React.FC<AboutProps> = ({ data, onDownloadCV }) => {
                 </div>
               </div>
 
-              <div className="p-4 rounded-xl bg-[#0E1528] border border-[#1A243D] flex items-center gap-3">
+              <div className="p-4 rounded-xl bg-[#0E1528] border border-[#1A243D] flex items-center gap-3 sm:col-span-2">
                 <div className="w-10 h-10 rounded-lg bg-[#F59E0B]/10 border border-[#F59E0B]/30 flex items-center justify-center text-[#F59E0B] shrink-0">
                   <Mail size={18} />
                 </div>
-                <div>
+                <div className="min-w-0 flex-1">
                   <div className="text-[11px] text-[#94A3B8] uppercase font-semibold">Email</div>
-                  <div className="text-xs sm:text-sm font-bold text-white truncate max-w-[170px] sm:max-w-none" title={data.personal.email}>{data.personal.email}</div>
+                  <a
+                    href={`mailto:${data.personal.email}`}
+                    className="text-xs sm:text-sm font-bold text-white hover:text-[#FBBF24] transition-colors break-all"
+                  >
+                    {data.personal.email}
+                  </a>
                 </div>
               </div>
             </div>

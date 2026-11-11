@@ -1,6 +1,6 @@
 import React from 'react';
 import { PortfolioData } from '../data/portfolioData';
-import { GithubIcon, LinkedinIcon, InstagramIcon } from './SocialIcons';
+import { GithubIcon, LinkedinIcon } from './SocialIcons';
 
 interface FooterProps {
   data: PortfolioData;
@@ -69,15 +69,6 @@ export const Footer: React.FC<FooterProps> = ({ data }) => {
               aria-label="LinkedIn"
             >
               <LinkedinIcon size={18} />
-            </a>
-            <a
-              href={data.personal.social.instagram}
-              target="_blank"
-              rel="noreferrer"
-              className="text-[#94A3B8] hover:text-white hover:scale-110 transition-all"
-              aria-label="Instagram"
-            >
-              <InstagramIcon size={18} />
             </a>
           </div>
         </div>

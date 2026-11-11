@@ -11,12 +11,11 @@ export const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({
   projects,
   onSelectProject,
 }) => {
-  const [activeTab, setActiveTab] = useState<'All' | 'Websites' | 'Mobile Apps' | 'UI/UX'>('All');
+  const [activeTab, setActiveTab] = useState<'All' | 'Websites' | 'UI/UX'>('All');
 
-  const tabs: Array<'All' | 'Websites' | 'Mobile Apps' | 'UI/UX'> = [
+  const tabs: Array<'All' | 'Websites' | 'UI/UX'> = [
     'All',
     'Websites',
-    'Mobile Apps',
     'UI/UX',
   ];
 
