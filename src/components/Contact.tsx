@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle2 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { PortfolioData } from '../data/portfolioData';
-import { GithubIcon, LinkedinIcon, TwitterIcon, InstagramIcon } from './SocialIcons';
+import { GithubIcon, LinkedinIcon, InstagramIcon } from './SocialIcons';
 
 interface ContactProps {
   data: PortfolioData;
@@ -142,15 +142,6 @@ export const Contact: React.FC<ContactProps> = ({ data, messagePreset }) => {
                   className="w-10 h-10 rounded-full bg-[#0E1528] border border-[#1A243D] flex items-center justify-center text-[#94A3B8] hover:text-white hover:border-[#F59E0B] hover:bg-[#131D36] hover:scale-110 transition-all"
                 >
                   <LinkedinIcon size={18} />
-                </a>
-                <a
-                  href={data.personal.social.twitter}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="Twitter / X"
-                  className="w-10 h-10 rounded-full bg-[#0E1528] border border-[#1A243D] flex items-center justify-center text-[#94A3B8] hover:text-white hover:border-[#F59E0B] hover:bg-[#131D36] hover:scale-110 transition-all"
-                >
-                  <TwitterIcon size={16} />
                 </a>
                 <a
                   href={data.personal.social.instagram}

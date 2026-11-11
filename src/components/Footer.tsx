@@ -1,6 +1,6 @@
 import React from 'react';
 import { PortfolioData } from '../data/portfolioData';
-import { GithubIcon, LinkedinIcon, TwitterIcon, InstagramIcon } from './SocialIcons';
+import { GithubIcon, LinkedinIcon, InstagramIcon } from './SocialIcons';
 
 interface FooterProps {
   data: PortfolioData;
@@ -18,20 +18,7 @@ export const Footer: React.FC<FooterProps> = ({ data }) => {
   };
 
   return (
-    <footer className="bg-[#030611]/85 backdrop-blur-md border-t border-[#172347] pt-14 pb-12 relative overflow-hidden">
-      {/* Decorative Handwritten text in Warm Amber */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10 flex justify-end">
-        <div className="flex flex-col items-end pr-2 sm:pr-8">
-          <div className="font-handwriting text-2xl sm:text-3xl text-[#FBBF24] font-bold tracking-wide -rotate-3 drop-shadow-[0_2px_12px_rgba(245,158,11,0.6)]">
-            Your Next Project Starts Here ♡
-          </div>
-          <svg className="w-16 h-8 text-[#F59E0B] mr-6 mt-1" viewBox="0 0 100 50" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
-            <path d="M10 15 Q 50 45 80 15" />
-            <path d="M65 15 L 80 15 L 80 30" />
-          </svg>
-        </div>
-      </div>
-
+    <footer className="bg-[#030611]/85 backdrop-blur-md border-t border-[#172347] pt-12 pb-12 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-[#1A243D]">
           {/* Logo */}
@@ -63,7 +50,7 @@ export const Footer: React.FC<FooterProps> = ({ data }) => {
             </a>
           </div>
 
-          {/* Social Links */}
+          {/* Social Links (Twitter removed) */}
           <div className="flex items-center gap-3">
             <a
               href={data.personal.social.github}
@@ -82,15 +69,6 @@ export const Footer: React.FC<FooterProps> = ({ data }) => {
               aria-label="LinkedIn"
             >
               <LinkedinIcon size={18} />
-            </a>
-            <a
-              href={data.personal.social.twitter}
-              target="_blank"
-              rel="noreferrer"
-              className="text-[#94A3B8] hover:text-white hover:scale-110 transition-all"
-              aria-label="Twitter / X"
-            >
-              <TwitterIcon size={16} />
             </a>
             <a
               href={data.personal.social.instagram}

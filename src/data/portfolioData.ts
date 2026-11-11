@@ -55,8 +55,8 @@ export interface PortfolioData {
     social: {
       github: string;
       linkedin: string;
-      twitter: string;
       instagram: string;
+      twitter?: string;
     };
   };
   skills: Skill[];
@@ -83,7 +83,6 @@ export const initialPortfolioData: PortfolioData = {
     social: {
       github: 'https://github.com',
       linkedin: 'https://www.linkedin.com/in/oggu-praveen-942957449?utm_source=share_via&utm_content=profile&utm_medium=member_android',
-      twitter: 'https://twitter.com',
       instagram: 'https://www.instagram.com/_mr_praveen_45__?exln=MW4ybmJxOHNuNnNubA==',
     },
   },

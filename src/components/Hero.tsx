@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowRight, Code2, Sparkles } from 'lucide-react';
 import { PortfolioData } from '../data/portfolioData';
-import { GithubIcon, LinkedinIcon, TwitterIcon, InstagramIcon } from './SocialIcons';
+import { GithubIcon, LinkedinIcon, InstagramIcon } from './SocialIcons';
 
 interface HeroProps {
   data: PortfolioData;
@@ -97,15 +97,6 @@ export const Hero: React.FC<HeroProps> = ({ data }) => {
                 className="w-11 h-11 rounded-full bg-[#0E1528]/90 border border-[#1A243D] flex items-center justify-center text-[#94A3B8] hover:text-white hover:border-[#F59E0B] hover:bg-[#131D36] hover:scale-115 transition-all shadow-md"
               >
                 <InstagramIcon size={18} />
-              </a>
-              <a
-                href={data.personal.social.twitter}
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Twitter / X"
-                className="w-11 h-11 rounded-full bg-[#0E1528]/90 border border-[#1A243D] flex items-center justify-center text-[#94A3B8] hover:text-white hover:border-[#F59E0B] hover:bg-[#131D36] hover:scale-115 transition-all shadow-md"
-              >
-                <TwitterIcon size={16} />
               </a>
             </div>
           </div>

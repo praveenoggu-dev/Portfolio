@@ -72,7 +72,7 @@ export const About: React.FC<AboutProps> = ({ data, onDownloadCV }) => {
             </div>
           </div>
 
-          {/* Right Visual Image & Handwritten note */}
+          {/* Right Visual Image */}
           <div className="lg:col-span-6 relative flex justify-center">
             <div className="relative w-full max-w-lg aspect-[4/3] rounded-3xl overflow-hidden border-2 border-[#1A243D] glow-card shadow-2xl">
               <img
@@ -81,20 +81,6 @@ export const About: React.FC<AboutProps> = ({ data, onDownloadCV }) => {
                 className="w-full h-full object-cover filter brightness-90 hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#070B14]/80 via-transparent to-transparent" />
-            </div>
-
-            {/* Handwritten "Code Design Create" with Curved Arrow in Warm Amber */}
-            <div className="absolute -right-4 -bottom-8 sm:-right-8 sm:-bottom-10 pointer-events-none z-10 flex flex-col items-center">
-              <div className="font-handwriting text-2xl sm:text-3xl text-[#FBBF24] font-bold rotate-6 tracking-wide drop-shadow-[0_2px_10px_rgba(245,158,11,0.6)] text-center leading-tight">
-                Code<br />
-                Design<br />
-                Create
-              </div>
-              {/* Handwritten Arrow SVG */}
-              <svg className="w-16 h-14 text-[#F59E0B] -rotate-12 mt-1" viewBox="0 0 100 80" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round">
-                <path d="M10 20 C 30 70, 70 70, 85 30" />
-                <path d="M70 30 L 85 30 L 85 45" />
-              </svg>
             </div>
           </div>
         </div>
