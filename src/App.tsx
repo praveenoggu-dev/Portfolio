@@ -38,6 +38,9 @@ export function App() {
         ) {
           return initialPortfolioData;
         }
+        if (!parsed.personal.logoStyle) {
+          parsed.personal.logoStyle = 'code-brackets';
+        }
         return parsed;
       } catch (e) {
         return initialPortfolioData;

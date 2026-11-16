@@ -52,6 +52,7 @@ export interface PortfolioData {
     phone?: string;
     heroImage: string;
     workspaceImage: string;
+    logoStyle?: 'code-brackets' | 'cyber-hex' | 'terminal' | 'infinity-loop';
     social: {
       github: string;
       linkedin: string;
@@ -79,6 +80,7 @@ export const initialPortfolioData: PortfolioData = {
     email: 'praveenoggu3@gmail.com',
     heroImage: '/profile.jpg',
     workspaceImage: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1000&q=80',
+    logoStyle: 'code-brackets',
     social: {
       github: 'https://github.com',
       linkedin: 'https://www.linkedin.com/in/oggu-praveen-942957449?utm_source=share_via&utm_content=profile&utm_medium=member_android',

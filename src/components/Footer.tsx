@@ -1,6 +1,7 @@
 import React from 'react';
 import { PortfolioData } from '../data/portfolioData';
 import { GithubIcon, LinkedinIcon } from './SocialIcons';
+import { Logo } from './Logo';
 
 interface FooterProps {
   data: PortfolioData;
@@ -39,14 +40,15 @@ export const Footer: React.FC<FooterProps> = ({ data, currentPage, onNavigate })
           {/* Logo */}
           <button
             onClick={() => handleLinkClick('home')}
-            className="flex items-center gap-3 cursor-pointer group"
+            className="cursor-pointer focus:outline-none text-left"
+            aria-label="Praveen Oggu Home"
           >
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-[#9333EA] to-[#A855F7] flex items-center justify-center font-heading font-extrabold text-white text-sm shadow-md shadow-[#A855F7]/30 group-hover:scale-105 transition-all">
-              {data.personal.initials}
-            </div>
-            <span className="font-heading font-bold text-base text-white group-hover:text-[#C084FC] transition-colors">
-              {data.personal.name}
-            </span>
+            <Logo
+              name={data.personal.name}
+              role={data.personal.role}
+              style={data.personal.logoStyle || 'code-brackets'}
+              size="sm"
+            />
           </button>
 
           {/* Navigation Links */}

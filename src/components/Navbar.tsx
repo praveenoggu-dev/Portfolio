@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Download, SlidersHorizontal } from 'lucide-react';
 import { PortfolioData } from '../data/portfolioData';
+import { Logo } from './Logo';
 
 interface NavbarProps {
   data: PortfolioData;
@@ -52,17 +53,18 @@ export const Navbar: React.FC<NavbarProps> = ({
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        {/* Monogram Logo */}
+        {/* Modern Portfolio Logo */}
         <button
           onClick={() => handleLinkClick('home')}
-          className="flex items-center gap-3 group focus:outline-none cursor-pointer"
+          className="focus:outline-none cursor-pointer text-left"
+          aria-label="Praveen Oggu Home"
         >
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#9333EA] to-[#A855F7] flex items-center justify-center font-heading font-extrabold text-white text-base tracking-tight shadow-md shadow-[#A855F7]/30 group-hover:scale-105 transition-all">
-            {data.personal.initials}
-          </div>
-          <span className="font-heading font-bold text-lg text-white tracking-wide group-hover:text-[#C084FC] transition-colors">
-            {data.personal.name}
-          </span>
+          <Logo
+            name={data.personal.name}
+            role={data.personal.role}
+            style={data.personal.logoStyle || 'code-brackets'}
+            size="md"
+          />
         </button>
 
         {/* Desktop Navigation Links */}

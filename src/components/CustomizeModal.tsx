@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { X, Save, RotateCcw } from 'lucide-react';
+import { X, Save, RotateCcw, Palette } from 'lucide-react';
 import { PortfolioData, initialPortfolioData } from '../data/portfolioData';
+import { Logo, LogoStyle } from './Logo';
 
 interface CustomizeModalProps {
   data: PortfolioData;
@@ -52,7 +53,63 @@ export const CustomizeModal: React.FC<CustomizeModalProps> = ({
         </div>
 
         {/* Scrollable Form */}
-        <form onSubmit={handleSubmit} className="p-6 overflow-y-auto space-y-4">
+        <form onSubmit={handleSubmit} className="p-6 overflow-y-auto space-y-5">
+          {/* Logo Selection Section */}
+          <div className="p-4 rounded-2xl bg-[#0B0617] border border-[#2C1B4D]">
+            <div className="flex items-center justify-between mb-3">
+              <label className="text-xs font-semibold text-[#C084FC] uppercase tracking-wider flex items-center gap-1.5">
+                <Palette size={14} /> Choose Your Portfolio Logo Style
+              </label>
+              <span className="text-[11px] text-[#A78BFA]/70">4 Custom Designs</span>
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+              {[
+                { id: 'code-brackets', label: '<PO /> Code', desc: 'Dev Monogram' },
+                { id: 'cyber-hex', label: 'Cyber Hex', desc: 'Tech Circuit' },
+                { id: 'terminal', label: '>_ Terminal', desc: 'CLI Prompt' },
+                { id: 'infinity-loop', label: 'Infinity', desc: 'Full-Stack Flow' },
+              ].map((styleOption) => {
+                const isSelected = (formData.personal.logoStyle || 'code-brackets') === styleOption.id;
+                return (
+                  <button
+                    key={styleOption.id}
+                    type="button"
+                    onClick={() =>
+                      setFormData({
+                        ...formData,
+                        personal: {
+                          ...formData.personal,
+                          logoStyle: styleOption.id as LogoStyle,
+                        },
+                      })
+                    }
+                    className={`flex flex-col items-center justify-center p-2.5 rounded-xl border transition-all cursor-pointer text-center ${
+                      isSelected
+                        ? 'bg-[#2A1647] border-[#A855F7] shadow-lg shadow-[#A855F7]/30 scale-[1.02]'
+                        : 'bg-[#150D2A]/60 border-[#2C1B4D] hover:border-[#A855F7]/50'
+                    }`}
+                  >
+                    <div className="w-9 h-9 mb-1.5 flex items-center justify-center">
+                      <Logo
+                        name=""
+                        role=""
+                        showSubtitle={false}
+                        style={styleOption.id as LogoStyle}
+                        size="sm"
+                      />
+                    </div>
+                    <span className="text-xs font-bold text-white leading-tight">
+                      {styleOption.label}
+                    </span>
+                    <span className="text-[10px] text-[#A78BFA] mt-0.5">
+                      {styleOption.desc}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label className="block text-xs font-semibold text-[#94A3B8] uppercase mb-1">
