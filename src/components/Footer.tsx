@@ -45,7 +45,6 @@ export const Footer: React.FC<FooterProps> = ({ data, currentPage, onNavigate })
           >
             <Logo
               name={data.personal.name}
-              role={data.personal.role}
               style={data.personal.logoStyle || 'code-brackets'}
               size="sm"
             />

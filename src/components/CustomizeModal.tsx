@@ -93,7 +93,6 @@ export const CustomizeModal: React.FC<CustomizeModalProps> = ({
                       <Logo
                         name=""
                         role=""
-                        showSubtitle={false}
                         style={styleOption.id as LogoStyle}
                         size="sm"
                       />

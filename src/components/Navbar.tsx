@@ -61,7 +61,6 @@ export const Navbar: React.FC<NavbarProps> = ({
         >
           <Logo
             name={data.personal.name}
-            role={data.personal.role}
             style={data.personal.logoStyle || 'code-brackets'}
             size="md"
           />

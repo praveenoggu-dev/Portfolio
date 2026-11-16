@@ -7,22 +7,19 @@ interface LogoProps {
   role?: string;
   style?: LogoStyle;
   size?: 'sm' | 'md' | 'lg';
-  showSubtitle?: boolean;
   className?: string;
 }
 
 export const Logo: React.FC<LogoProps> = ({
   name = 'Praveen Oggu',
-  role = 'Full Stack Dev',
   style = 'code-brackets',
   size = 'md',
-  showSubtitle = true,
   className = '',
 }) => {
   const iconDimensions = {
-    sm: { box: 'w-8 h-8', svg: 24, font: 'text-sm', sub: 'text-[9px]' },
-    md: { box: 'w-10 h-10', svg: 28, font: 'text-base', sub: 'text-[10px]' },
-    lg: { box: 'w-12 h-12', svg: 34, font: 'text-lg', sub: 'text-[11px]' },
+    sm: { box: 'w-8 h-8', svg: 24, font: 'text-sm' },
+    md: { box: 'w-10 h-10', svg: 28, font: 'text-lg' },
+    lg: { box: 'w-12 h-12', svg: 34, font: 'text-xl' },
   }[size];
 
   // Render the chosen SVG emblem based on style
@@ -290,21 +287,12 @@ export const Logo: React.FC<LogoProps> = ({
         </div>
       </div>
 
-      {/* Typography / Name & Title */}
-      <div className="flex flex-col text-left">
-        <span
-          className={`font-heading font-extrabold ${iconDimensions.font} tracking-tight text-white group-hover:text-[#E9D5FF] transition-colors`}
-        >
-          {name}
-        </span>
-        {showSubtitle && (
-          <span
-            className={`${iconDimensions.sub} font-mono uppercase tracking-widest text-[#A78BFA]/85 -mt-0.5 group-hover:text-[#C084FC] transition-colors`}
-          >
-            Full Stack Developer
-          </span>
-        )}
-      </div>
+      {/* Brand Name */}
+      <span
+        className={`font-heading font-extrabold ${iconDimensions.font} tracking-wide text-white group-hover:text-[#C084FC] transition-colors`}
+      >
+        {name}
+      </span>
     </div>
   );
 };
