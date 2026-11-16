@@ -34,12 +34,19 @@ export function App() {
           parsed?.personal?.social?.linkedin === 'https://linkedin.com' ||
           !parsed?.skills?.some((s: any) => s.name === 'Python') ||
           parsed?.services?.some((s: any) => s.id === 'mobile-app') ||
-          parsed?.projects?.some((p: any) => p.category === 'Mobile Apps')
+          parsed?.projects?.some((p: any) => p.category === 'Mobile Apps') ||
+          parsed?.personal?.role?.includes('Computer Science')
         ) {
           return initialPortfolioData;
         }
         if (!parsed.personal.logoStyle) {
           parsed.personal.logoStyle = 'code-brackets';
+        }
+        if (parsed.personal.role?.includes('Computer Science')) {
+          parsed.personal.role = 'Full Stack Developer';
+        }
+        if (parsed.personal.aboutText?.includes('Computer Science student and ')) {
+          parsed.personal.aboutText = parsed.personal.aboutText.replace('Computer Science student and ', '');
         }
         return parsed;
       } catch (e) {

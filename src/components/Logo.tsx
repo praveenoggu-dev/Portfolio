@@ -292,19 +292,16 @@ export const Logo: React.FC<LogoProps> = ({
 
       {/* Typography / Name & Title */}
       <div className="flex flex-col text-left">
-        <div className="flex items-center gap-1.5">
-          <span
-            className={`font-heading font-extrabold ${iconDimensions.font} tracking-tight text-white group-hover:text-[#E9D5FF] transition-colors`}
-          >
-            {name}
-          </span>
-          <span className="w-1.5 h-1.5 rounded-full bg-[#A855F7] shadow-sm shadow-[#A855F7] animate-pulse" />
-        </div>
+        <span
+          className={`font-heading font-extrabold ${iconDimensions.font} tracking-tight text-white group-hover:text-[#E9D5FF] transition-colors`}
+        >
+          {name}
+        </span>
         {showSubtitle && (
           <span
             className={`${iconDimensions.sub} font-mono uppercase tracking-widest text-[#A78BFA]/85 -mt-0.5 group-hover:text-[#C084FC] transition-colors`}
           >
-            {role.includes('|') ? role.split('|')[0].trim() : role}
+            Full Stack Developer
           </span>
         )}
       </div>

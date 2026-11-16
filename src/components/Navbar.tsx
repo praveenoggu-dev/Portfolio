@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Download, SlidersHorizontal } from 'lucide-react';
+import { Menu, X, Download } from 'lucide-react';
 import { PortfolioData } from '../data/portfolioData';
 import { Logo } from './Logo';
 
@@ -7,7 +7,7 @@ interface NavbarProps {
   data: PortfolioData;
   currentPage: string;
   onNavigate: (page: string) => void;
-  onOpenCustomize: () => void;
+  onOpenCustomize?: () => void;
   onDownloadCV: () => void;
 }
 
@@ -107,16 +107,8 @@ export const Navbar: React.FC<NavbarProps> = ({
           })}
         </nav>
 
-        {/* CTA and Customizer Actions */}
+        {/* CTA Actions */}
         <div className="hidden md:flex items-center gap-3">
-          <button
-            onClick={onOpenCustomize}
-            title="Customize your portfolio details"
-            className="p-2.5 rounded-xl text-[#A78BFA] hover:text-white hover:bg-[#150D2A] border border-[#2C1B4D] hover:border-[#A855F7]/50 transition-all cursor-pointer"
-          >
-            <SlidersHorizontal size={17} />
-          </button>
-
           <button
             onClick={onDownloadCV}
             className="theme-btn-primary flex items-center gap-2 px-5 py-2.5 rounded-full text-white text-xs font-semibold tracking-wide hover:-translate-y-0.5 transition-all cursor-pointer shadow-md"
@@ -127,14 +119,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="flex md:hidden items-center gap-2">
-          <button
-            onClick={onOpenCustomize}
-            className="p-2 rounded-lg text-[#A78BFA] hover:text-white bg-[#150D2A] border border-[#2C1B4D] cursor-pointer"
-          >
-            <SlidersHorizontal size={17} />
-          </button>
-
+        <div className="flex md:hidden items-center">
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="p-2 rounded-lg text-white bg-[#150D2A] border border-[#2C1B4D] focus:outline-none cursor-pointer"
