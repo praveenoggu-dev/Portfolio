@@ -48,16 +48,16 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({
             >
               <div>
                 {/* Image Preview Box */}
-                <div className="relative aspect-[16/10] overflow-hidden bg-[#0A0714] border-b border-[#2C1B4D]">
+                <div className="relative aspect-[16/10] overflow-hidden bg-[#08011A] border-b border-[#4A1278]">
                   <img
                     src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter brightness-95"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#150D2A] via-transparent to-transparent opacity-60" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#1F053D] via-transparent to-transparent opacity-60" />
 
                   {/* Category Pill */}
-                  <span className="absolute top-4 right-4 px-3 py-1 rounded-full bg-[#090514]/85 backdrop-blur-md text-[11px] font-semibold tracking-wide text-[#E9D5FF] border border-[rgba(168,85,247,0.4)]">
+                  <span className="absolute top-4 right-4 px-3 py-1 rounded-full bg-[#070114]/85 backdrop-blur-md text-[11px] font-semibold tracking-wide text-[#DDD6FE] border border-[rgba(139,92,246,0.5)]">
                     {project.category}
                   </span>
                 </div>
@@ -69,7 +69,7 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="px-2.5 py-1 rounded-md bg-[#1D123A] border border-[#2C1B4D] text-[11px] font-medium text-[#A78BFA]"
+                        className="px-2.5 py-1 rounded-md bg-[#2E0859] border border-[#4A1278] text-[11px] font-medium text-[#C4B5FD]"
                       >
                         {tag}
                       </span>

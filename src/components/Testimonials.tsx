@@ -40,7 +40,7 @@ export const Testimonials: React.FC<TestimonialsProps> = ({ testimonials }) => {
               <div>
                 {/* Header: Avatar, Name, Company */}
                 <div className="flex items-center gap-4 mb-5">
-                  <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-[#A855F7]/50 shrink-0">
+                  <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-[#8B5CF6]/60 shrink-0">
                     <img
                       src={item.avatar}
                       alt={item.name}
@@ -51,7 +51,7 @@ export const Testimonials: React.FC<TestimonialsProps> = ({ testimonials }) => {
                     <h3 className="font-heading font-bold text-white text-base leading-snug">
                       {item.name}
                     </h3>
-                    <p className="text-xs text-[#A78BFA]">
+                    <p className="text-xs text-[#C4B5FD]">
                       {item.role}, {item.company}
                     </p>
                   </div>
@@ -64,7 +64,7 @@ export const Testimonials: React.FC<TestimonialsProps> = ({ testimonials }) => {
               </div>
 
               {/* 5 Golden Stars */}
-              <div className="flex items-center gap-1 text-[#C084FC] pt-2 border-t border-[#2C1B4D]/60">
+              <div className="flex items-center gap-1 text-[#C084FC] pt-2 border-t border-[#4A1278]/60">
                 {[...Array(item.rating)].map((_, i) => (
                   <Star key={i} size={16} fill="#C084FC" strokeWidth={0} />
                 ))}

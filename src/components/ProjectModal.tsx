@@ -14,26 +14,26 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/85 backdrop-blur-md animate-in fade-in duration-200">
       <div
-        className="relative w-full max-w-2xl bg-[#130B26] border border-[#2C1B4D] rounded-3xl overflow-hidden shadow-2xl flex flex-col max-h-[90vh]"
+        className="relative w-full max-w-2xl bg-[#16032E] border border-[#4A1278] rounded-3xl overflow-hidden shadow-2xl flex flex-col max-h-[90vh]"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 z-20 w-9 h-9 rounded-full bg-[#090514]/85 text-[#A78BFA] hover:text-white border border-[#2C1B4D] flex items-center justify-center transition-all hover:scale-105 cursor-pointer"
+          className="absolute top-4 right-4 z-20 w-9 h-9 rounded-full bg-[#070114]/85 text-[#C4B5FD] hover:text-white border border-[#4A1278] flex items-center justify-center transition-all hover:scale-105 cursor-pointer"
         >
           <X size={18} />
         </button>
 
         {/* Modal Image */}
-        <div className="relative aspect-[16/9] w-full bg-[#090514] overflow-hidden">
+        <div className="relative aspect-[16/9] w-full bg-[#070114] overflow-hidden">
           <img
             src={project.image}
             alt={project.title}
             className="w-full h-full object-cover filter brightness-95"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#130B26] via-transparent to-transparent opacity-85" />
-          <span className="absolute top-4 left-4 px-3 py-1 rounded-full bg-[#090514]/90 text-xs font-semibold text-[#E9D5FF] border border-[rgba(168,85,247,0.4)]">
+          <div className="absolute inset-0 bg-gradient-to-t from-[#16032E] via-transparent to-transparent opacity-85" />
+          <span className="absolute top-4 left-4 px-3 py-1 rounded-full bg-[#070114]/90 text-xs font-semibold text-[#DDD6FE] border border-[rgba(139,92,246,0.5)]">
             {project.category}
           </span>
         </div>
@@ -44,7 +44,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
             <h3 className="text-2xl font-heading font-extrabold text-white mb-2">
               {project.title}
             </h3>
-            <p className="text-sm text-[#A78BFA] leading-relaxed">
+            <p className="text-sm text-[#C4B5FD] leading-relaxed">
               {project.description}
             </p>
           </div>
@@ -58,7 +58,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
               {project.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="px-3 py-1 rounded-lg bg-[#1D123A] border border-[#2C1B4D] text-xs font-medium text-white flex items-center gap-1.5"
+                  className="px-3 py-1 rounded-lg bg-[#2E0859] border border-[#4A1278] text-xs font-medium text-white flex items-center gap-1.5"
                 >
                   <CheckCircle2 size={13} className="text-[#C084FC]" />
                   {tag}
@@ -68,7 +68,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
           </div>
 
           {/* Action Links */}
-          <div className="flex flex-wrap items-center gap-4 pt-4 border-t border-[#2C1B4D]">
+          <div className="flex flex-wrap items-center gap-4 pt-4 border-t border-[#4A1278]">
             {project.demoUrl && (
               <a
                 href={project.demoUrl}
@@ -85,7 +85,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                 href={project.githubUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#150D2A] hover:bg-[#1D123A] border border-[#2C1B4D] hover:border-[#A855F7]/60 text-white text-xs sm:text-sm font-semibold tracking-wide transition-all cursor-pointer"
+                className="flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#1F053D] hover:bg-[#2E0859] border border-[#4A1278] hover:border-[#8B5CF6]/70 text-white text-xs sm:text-sm font-semibold tracking-wide transition-all cursor-pointer"
               >
                 <GithubIcon size={15} />
                 <span>Source Code</span>

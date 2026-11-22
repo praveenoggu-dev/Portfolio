@@ -31,22 +31,22 @@ export const CustomizeModal: React.FC<CustomizeModalProps> = ({
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/85 backdrop-blur-md animate-in fade-in duration-200">
       <div
-        className="relative w-full max-w-2xl bg-[#130B26] border border-[#2C1B4D] rounded-3xl overflow-hidden shadow-2xl flex flex-col max-h-[90vh]"
+        className="relative w-full max-w-2xl bg-[#16032E] border border-[#4A1278] rounded-3xl overflow-hidden shadow-2xl flex flex-col max-h-[90vh]"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="p-6 border-b border-[#2C1B4D] flex items-center justify-between">
+        <div className="p-6 border-b border-[#4A1278] flex items-center justify-between">
           <div>
             <h3 className="text-xl font-heading font-bold text-white">
               Customize Your Portfolio
             </h3>
-            <p className="text-xs text-[#A78BFA]">
+            <p className="text-xs text-[#C4B5FD]">
               Easily update your personal information, role, contact info, and bio.
             </p>
           </div>
           <button
             onClick={onClose}
-            className="w-9 h-9 rounded-full bg-[#0F0A1E] text-[#A78BFA] hover:text-white border border-[#2C1B4D] flex items-center justify-center transition-all cursor-pointer"
+            className="w-9 h-9 rounded-full bg-[#120324] text-[#C4B5FD] hover:text-white border border-[#4A1278] flex items-center justify-center transition-all cursor-pointer"
           >
             <X size={18} />
           </button>
@@ -55,12 +55,12 @@ export const CustomizeModal: React.FC<CustomizeModalProps> = ({
         {/* Scrollable Form */}
         <form onSubmit={handleSubmit} className="p-6 overflow-y-auto space-y-5">
           {/* Logo Selection Section */}
-          <div className="p-4 rounded-2xl bg-[#0B0617] border border-[#2C1B4D]">
+          <div className="p-4 rounded-2xl bg-[#0E021F] border border-[#4A1278]">
             <div className="flex items-center justify-between mb-3">
               <label className="text-xs font-semibold text-[#C084FC] uppercase tracking-wider flex items-center gap-1.5">
                 <Palette size={14} /> Choose Your Portfolio Logo Style
               </label>
-              <span className="text-[11px] text-[#A78BFA]/70">4 Custom Designs</span>
+              <span className="text-[11px] text-[#C4B5FD]/70">4 Custom Designs</span>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
               {[
@@ -85,8 +85,8 @@ export const CustomizeModal: React.FC<CustomizeModalProps> = ({
                     }
                     className={`flex flex-col items-center justify-center p-2.5 rounded-xl border transition-all cursor-pointer text-center ${
                       isSelected
-                        ? 'bg-[#2A1647] border-[#A855F7] shadow-lg shadow-[#A855F7]/30 scale-[1.02]'
-                        : 'bg-[#150D2A]/60 border-[#2C1B4D] hover:border-[#A855F7]/50'
+                        ? 'bg-[#350A5E] border-[#8B5CF6] shadow-lg shadow-[#8B5CF6]/35 scale-[1.02]'
+                        : 'bg-[#1F053D]/60 border-[#4A1278] hover:border-[#8B5CF6]/60'
                     }`}
                   >
                     <div className="w-9 h-9 mb-1.5 flex items-center justify-center">
@@ -133,7 +133,7 @@ export const CustomizeModal: React.FC<CustomizeModalProps> = ({
                     },
                   })
                 }
-                className="w-full px-3.5 py-2.5 rounded-xl bg-[#0F0A1E] border border-[#2C1B4D] focus:border-[#A855F7] text-white text-sm outline-none"
+                className="w-full px-3.5 py-2.5 rounded-xl bg-[#120324] border border-[#4A1278] focus:border-[#8B5CF6] text-white text-sm outline-none"
               />
             </div>
 
@@ -150,7 +150,7 @@ export const CustomizeModal: React.FC<CustomizeModalProps> = ({
                     personal: { ...formData.personal, role: e.target.value },
                   })
                 }
-                className="w-full px-3.5 py-2.5 rounded-xl bg-[#0F0A1E] border border-[#2C1B4D] focus:border-[#A855F7] text-white text-sm outline-none"
+                className="w-full px-3.5 py-2.5 rounded-xl bg-[#120324] border border-[#4A1278] focus:border-[#8B5CF6] text-white text-sm outline-none"
               />
             </div>
           </div>
@@ -168,7 +168,7 @@ export const CustomizeModal: React.FC<CustomizeModalProps> = ({
                   personal: { ...formData.personal, bio: e.target.value },
                 })
               }
-              className="w-full px-3.5 py-2.5 rounded-xl bg-[#0F0A1E] border border-[#2C1B4D] focus:border-[#A855F7] text-white text-sm outline-none"
+              className="w-full px-3.5 py-2.5 rounded-xl bg-[#120324] border border-[#4A1278] focus:border-[#8B5CF6] text-white text-sm outline-none"
             />
           </div>
 
@@ -203,7 +203,7 @@ export const CustomizeModal: React.FC<CustomizeModalProps> = ({
                     personal: { ...formData.personal, email: e.target.value },
                   })
                 }
-                className="w-full px-3.5 py-2.5 rounded-xl bg-[#0F0A1E] border border-[#2C1B4D] focus:border-[#A855F7] text-white text-sm outline-none"
+                className="w-full px-3.5 py-2.5 rounded-xl bg-[#120324] border border-[#4A1278] focus:border-[#8B5CF6] text-white text-sm outline-none"
               />
             </div>
 
@@ -220,7 +220,7 @@ export const CustomizeModal: React.FC<CustomizeModalProps> = ({
                     personal: { ...formData.personal, location: e.target.value },
                   })
                 }
-                className="w-full px-3.5 py-2.5 rounded-xl bg-[#0F0A1E] border border-[#2C1B4D] focus:border-[#A855F7] text-white text-sm outline-none"
+                className="w-full px-3.5 py-2.5 rounded-xl bg-[#120324] border border-[#4A1278] focus:border-[#8B5CF6] text-white text-sm outline-none"
               />
             </div>
           </div>
@@ -239,7 +239,7 @@ export const CustomizeModal: React.FC<CustomizeModalProps> = ({
                     personal: { ...formData.personal, experience: e.target.value },
                   })
                 }
-                className="w-full px-3.5 py-2.5 rounded-xl bg-[#0F0A1E] border border-[#2C1B4D] focus:border-[#A855F7] text-white text-sm outline-none"
+                className="w-full px-3.5 py-2.5 rounded-xl bg-[#120324] border border-[#4A1278] focus:border-[#8B5CF6] text-white text-sm outline-none"
               />
             </div>
 
@@ -256,7 +256,7 @@ export const CustomizeModal: React.FC<CustomizeModalProps> = ({
                     personal: { ...formData.personal, heroImage: e.target.value },
                   })
                 }
-                className="w-full px-3.5 py-2.5 rounded-xl bg-[#0F0A1E] border border-[#2C1B4D] focus:border-[#A855F7] text-white text-sm outline-none"
+                className="w-full px-3.5 py-2.5 rounded-xl bg-[#120324] border border-[#4A1278] focus:border-[#8B5CF6] text-white text-sm outline-none"
               />
             </div>
           </div>
@@ -278,7 +278,7 @@ export const CustomizeModal: React.FC<CustomizeModalProps> = ({
                     },
                   })
                 }
-                className="w-full px-3.5 py-2.5 rounded-xl bg-[#0F0A1E] border border-[#2C1B4D] focus:border-[#A855F7] text-white text-sm outline-none"
+                className="w-full px-3.5 py-2.5 rounded-xl bg-[#120324] border border-[#4A1278] focus:border-[#8B5CF6] text-white text-sm outline-none"
               />
             </div>
 
@@ -298,7 +298,7 @@ export const CustomizeModal: React.FC<CustomizeModalProps> = ({
                     },
                   })
                 }
-                className="w-full px-3.5 py-2.5 rounded-xl bg-[#0F0A1E] border border-[#2C1B4D] focus:border-[#A855F7] text-white text-sm outline-none"
+                className="w-full px-3.5 py-2.5 rounded-xl bg-[#120324] border border-[#4A1278] focus:border-[#8B5CF6] text-white text-sm outline-none"
               />
             </div>
           </div>

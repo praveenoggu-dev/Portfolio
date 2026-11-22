@@ -135,10 +135,10 @@ export const ParticleBackground: React.FC = () => {
 
   return (
     <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-      {/* Deep Ambient Lavender Glow Orbs */}
-      <div className="absolute -top-[10%] left-[20%] w-[650px] h-[650px] bg-gradient-to-br from-[#A855F7]/15 to-[#7E22CE]/10 rounded-full blur-[150px] animate-pulse-glow" />
-      <div className="absolute top-[40%] -right-[10%] w-[550px] h-[550px] bg-gradient-to-tl from-[#C084FC]/12 to-[#9333EA]/10 rounded-full blur-[150px] animate-aurora" />
-      <div className="absolute -bottom-[10%] left-[10%] w-[700px] h-[700px] bg-gradient-to-tr from-[#9333EA]/12 to-[#A855F7]/10 rounded-full blur-[160px] animate-pulse-glow" />
+      {/* Deep Ambient Royal Electric Violet Glow Orbs */}
+      <div className="absolute -top-[10%] left-[20%] w-[680px] h-[680px] bg-gradient-to-br from-[#7C3AED]/22 to-[#4A0E80]/18 rounded-full blur-[150px] animate-pulse-glow" />
+      <div className="absolute top-[40%] -right-[10%] w-[580px] h-[580px] bg-gradient-to-tl from-[#9333EA]/20 to-[#6D28D9]/16 rounded-full blur-[150px] animate-aurora" />
+      <div className="absolute -bottom-[10%] left-[10%] w-[720px] h-[720px] bg-gradient-to-tr from-[#8B5CF6]/20 to-[#4C1D95]/16 rounded-full blur-[160px] animate-pulse-glow" />
 
       {/* Cybernetic Dot Matrix Grid Pattern */}
       <div className="absolute inset-0 bg-dots-pattern opacity-40 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black_80%)]" />

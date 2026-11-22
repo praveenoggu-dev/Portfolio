@@ -34,9 +34,9 @@ export const Footer: React.FC<FooterProps> = ({ data, currentPage, onNavigate })
   };
 
   return (
-    <footer className="bg-[#07040F]/95 backdrop-blur-md border-t border-[#2C1B4D] pt-12 pb-12 relative overflow-hidden">
+    <footer className="bg-[#070114]/98 backdrop-blur-md border-t border-[#4A1278] pt-12 pb-12 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-[#2C1B4D]">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-[#4A1278]">
           {/* Logo */}
           <button
             onClick={() => handleLinkClick('home')}
@@ -51,7 +51,7 @@ export const Footer: React.FC<FooterProps> = ({ data, currentPage, onNavigate })
           </button>
 
           {/* Navigation Links */}
-          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs sm:text-sm text-[#A78BFA]">
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs sm:text-sm text-[#C4B5FD]">
             {footerLinks.map((link) => {
               const isActive = currentPage === link.page;
               return (
@@ -74,7 +74,7 @@ export const Footer: React.FC<FooterProps> = ({ data, currentPage, onNavigate })
               href={data.personal.social.github}
               target="_blank"
               rel="noreferrer"
-              className="w-9 h-9 rounded-full bg-[#150D2A] border border-[#2C1B4D] flex items-center justify-center text-[#A78BFA] hover:text-white hover:border-[#A855F7] hover:scale-110 transition-all shadow-sm"
+              className="w-9 h-9 rounded-full bg-[#1F053D] border border-[#4A1278] flex items-center justify-center text-[#C4B5FD] hover:text-white hover:border-[#8B5CF6] hover:scale-110 transition-all shadow-sm"
               aria-label="GitHub"
             >
               <GithubIcon size={16} />
@@ -83,7 +83,7 @@ export const Footer: React.FC<FooterProps> = ({ data, currentPage, onNavigate })
               href={data.personal.social.linkedin}
               target="_blank"
               rel="noreferrer"
-              className="w-9 h-9 rounded-full bg-[#150D2A] border border-[#2C1B4D] flex items-center justify-center text-[#A78BFA] hover:text-white hover:border-[#A855F7] hover:scale-110 transition-all shadow-sm"
+              className="w-9 h-9 rounded-full bg-[#1F053D] border border-[#4A1278] flex items-center justify-center text-[#C4B5FD] hover:text-white hover:border-[#8B5CF6] hover:scale-110 transition-all shadow-sm"
               aria-label="LinkedIn"
             >
               <LinkedinIcon size={16} />
@@ -92,7 +92,7 @@ export const Footer: React.FC<FooterProps> = ({ data, currentPage, onNavigate })
         </div>
 
         {/* Copyright */}
-        <div className="pt-6 text-center text-xs text-[#8B7AA8]">
+        <div className="pt-6 text-center text-xs text-[#A78BFA]">
           © {currentYear} {data.personal.name}. All rights reserved. Built with precision and modern UI/UX design.
         </div>
       </div>

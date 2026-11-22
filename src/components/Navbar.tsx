@@ -48,8 +48,8 @@ export const Navbar: React.FC<NavbarProps> = ({
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-[#090514]/95 backdrop-blur-md border-b border-[#2C1B4D] py-3.5 shadow-xl shadow-black/60'
-          : 'bg-[#090514]/80 backdrop-blur-sm py-4 border-b border-transparent'
+          ? 'bg-[#070114]/95 backdrop-blur-md border-b border-[#4A1278] py-3.5 shadow-xl shadow-black/70'
+          : 'bg-[#070114]/80 backdrop-blur-sm py-4 border-b border-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -67,7 +67,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         </button>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden lg:flex items-center gap-1.5 bg-[#0F0A1E]/90 p-1.5 rounded-full border border-[#2C1B4D]">
+        <nav className="hidden lg:flex items-center gap-1.5 bg-[#120324]/90 p-1.5 rounded-full border border-[#4A1278]">
           {navLinks.map((link) => {
             const isActive = currentPage === link.page;
             return (
@@ -76,8 +76,8 @@ export const Navbar: React.FC<NavbarProps> = ({
                 onClick={() => handleLinkClick(link.page)}
                 className={`px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide transition-all cursor-pointer ${
                   isActive
-                    ? 'bg-gradient-to-r from-[#9333EA] to-[#A855F7] text-white shadow-md shadow-[#A855F7]/30'
-                    : 'text-[#A78BFA] hover:text-white hover:bg-[#1D123A]'
+                    ? 'bg-gradient-to-r from-[#7C3AED] to-[#8B5CF6] text-white shadow-md shadow-[#8B5CF6]/35'
+                    : 'text-[#C4B5FD] hover:text-white hover:bg-[#2E0859]'
                 }`}
               >
                 {link.label}
@@ -96,8 +96,8 @@ export const Navbar: React.FC<NavbarProps> = ({
                 onClick={() => handleLinkClick(link.page)}
                 className={`text-xs font-semibold py-1 transition-colors cursor-pointer ${
                   isActive
-                    ? 'text-[#C084FC] border-b-2 border-[#A855F7]'
-                    : 'text-[#A78BFA] hover:text-white'
+                    ? 'text-[#C084FC] border-b-2 border-[#8B5CF6]'
+                    : 'text-[#C4B5FD] hover:text-white'
                 }`}
               >
                 {link.label}
@@ -121,7 +121,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         <div className="flex md:hidden items-center">
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 rounded-lg text-white bg-[#150D2A] border border-[#2C1B4D] focus:outline-none cursor-pointer"
+            className="p-2 rounded-lg text-white bg-[#1F053D] border border-[#4A1278] focus:outline-none cursor-pointer"
             aria-label="Toggle menu"
           >
             {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -131,7 +131,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-[#150D2A]/98 backdrop-blur-2xl border-b border-[#2C1B4D] px-6 py-5 shadow-2xl animate-in slide-in-from-top duration-200">
+        <div className="md:hidden bg-[#1F053D]/98 backdrop-blur-2xl border-b border-[#4A1278] px-6 py-5 shadow-2xl animate-in slide-in-from-top duration-200">
           <div className="flex flex-col gap-2">
             {navLinks.map((link) => {
               const isActive = currentPage === link.page;
@@ -141,8 +141,8 @@ export const Navbar: React.FC<NavbarProps> = ({
                   onClick={() => handleLinkClick(link.page)}
                   className={`flex items-center justify-between text-left font-medium text-sm py-2.5 px-3.5 rounded-xl transition-colors cursor-pointer ${
                     isActive
-                      ? 'text-white bg-gradient-to-r from-[#9333EA]/90 to-[#A855F7]/90 font-bold shadow-md'
-                      : 'text-[#A78BFA] hover:text-white hover:bg-[#1D123A]'
+                      ? 'text-white bg-gradient-to-r from-[#7C3AED]/95 to-[#8B5CF6]/95 font-bold shadow-md'
+                      : 'text-[#C4B5FD] hover:text-white hover:bg-[#2E0859]'
                   }`}
                 >
                   <span>{link.label}</span>
@@ -152,7 +152,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 </button>
               );
             })}
-            <div className="pt-3 mt-1 border-t border-[#2C1B4D] flex flex-col gap-3">
+            <div className="pt-3 mt-1 border-t border-[#4A1278] flex flex-col gap-3">
               <button
                 onClick={() => {
                   setMobileMenuOpen(false);
