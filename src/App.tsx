@@ -31,6 +31,7 @@ export function App() {
           parsed?.personal?.name === 'Alex Carter' ||
           parsed?.personal?.heroImage?.includes('unsplash') ||
           parsed?.personal?.workspaceImage?.includes('unsplash') ||
+          parsed?.personal?.workspaceImage?.includes('about-workspace-ai') ||
           parsed?.personal?.email?.includes('example.com') ||
           parsed?.personal?.social?.linkedin === 'https://linkedin.com' ||
           !parsed?.skills?.some((s: any) => s.name === 'Python') ||

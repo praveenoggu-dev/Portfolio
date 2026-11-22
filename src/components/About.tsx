@@ -85,21 +85,10 @@ export const About: React.FC<AboutProps> = ({ data, onDownloadCV }) => {
             <div className="relative w-full max-w-lg aspect-[4/3] rounded-3xl overflow-hidden border-2 border-[#A855F7]/60 shadow-2xl shadow-black/80 glow-card group">
               <img
                 src={data.personal.workspaceImage}
-                alt="AI Developer Workspace"
+                alt="AI Coding Computer Screen"
                 className="w-full h-full object-cover filter brightness-95 contrast-105 group-hover:scale-105 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#090514]/90 via-[#090514]/20 to-transparent" />
-
-              {/* Floating Tech Badge */}
-              <div className="absolute bottom-4 left-4 right-4 sm:right-auto px-4 py-2.5 rounded-2xl bg-[#090514]/90 backdrop-blur-xl border border-[#A855F7]/40 shadow-xl flex items-center gap-3">
-                <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-[#9333EA] to-[#A855F7] flex items-center justify-center text-white shadow-md shadow-[#A855F7]/30">
-                  <span className="text-xs font-mono font-bold">AI</span>
-                </div>
-                <div>
-                  <div className="text-[10px] uppercase font-mono tracking-wider text-[#C084FC]">Tech Environment</div>
-                  <div className="text-xs font-bold text-white">Full Stack & AI Development</div>
-                </div>
-              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-[#090514]/60 via-transparent to-transparent pointer-events-none" />
             </div>
           </div>
         </div>
