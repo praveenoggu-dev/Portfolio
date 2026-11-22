@@ -79,7 +79,7 @@ export const initialPortfolioData: PortfolioData = {
     experience: 'Fresher / Student',
     email: 'praveenoggu3@gmail.com',
     heroImage: '/profile.jpg',
-    workspaceImage: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1000&q=80',
+    workspaceImage: '/about-workspace-ai.jpg',
     logoStyle: 'code-brackets',
     social: {
       github: 'https://github.com',

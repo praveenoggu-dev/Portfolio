@@ -78,14 +78,28 @@ export const About: React.FC<AboutProps> = ({ data, onDownloadCV }) => {
           </div>
 
           {/* Right Visual Image */}
-          <div className="lg:col-span-6 relative flex justify-center">
-            <div className="relative w-full max-w-lg aspect-[4/3] rounded-3xl overflow-hidden border-2 border-[#2C1B4D] glow-card shadow-2xl">
+          <div className="lg:col-span-6 relative flex justify-center items-center">
+            {/* Ambient Lavender Aura */}
+            <div className="absolute -inset-2 bg-gradient-to-tr from-[#9333EA]/30 via-[#A855F7]/25 to-[#C084FC]/20 rounded-3xl blur-2xl -z-10 animate-pulse-glow" />
+
+            <div className="relative w-full max-w-lg aspect-[4/3] rounded-3xl overflow-hidden border-2 border-[#A855F7]/60 shadow-2xl shadow-black/80 glow-card group">
               <img
                 src={data.personal.workspaceImage}
-                alt="Workspace setup"
-                className="w-full h-full object-cover filter brightness-90 hover:scale-105 transition-transform duration-700"
+                alt="AI Developer Workspace"
+                className="w-full h-full object-cover filter brightness-95 contrast-105 group-hover:scale-105 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#090514]/80 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#090514]/90 via-[#090514]/20 to-transparent" />
+
+              {/* Floating Tech Badge */}
+              <div className="absolute bottom-4 left-4 right-4 sm:right-auto px-4 py-2.5 rounded-2xl bg-[#090514]/90 backdrop-blur-xl border border-[#A855F7]/40 shadow-xl flex items-center gap-3">
+                <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-[#9333EA] to-[#A855F7] flex items-center justify-center text-white shadow-md shadow-[#A855F7]/30">
+                  <span className="text-xs font-mono font-bold">AI</span>
+                </div>
+                <div>
+                  <div className="text-[10px] uppercase font-mono tracking-wider text-[#C084FC]">Tech Environment</div>
+                  <div className="text-xs font-bold text-white">Full Stack & AI Development</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
