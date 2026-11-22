@@ -276,10 +276,10 @@ export const Logo: React.FC<LogoProps> = ({
     <div className={`flex items-center gap-3 group cursor-pointer ${className}`}>
       {/* Logo Icon Container */}
       <div
-        className={`${iconDimensions.box} relative rounded-xl flex items-center justify-center shadow-lg shadow-[#8B5CF6]/30 group-hover:shadow-[#C084FC]/45 group-hover:scale-105 transition-all duration-300`}
+        className={`${iconDimensions.box} relative rounded-xl flex items-center justify-center shadow-lg shadow-[#8B5CF6]/30 group-hover:shadow-[#38BDF8]/45 group-hover:scale-105 transition-all duration-300`}
       >
         {/* Ambient background glow */}
-        <div className="absolute inset-0 rounded-xl bg-gradient-to-tr from-[#7C3AED] to-[#8B5CF6] opacity-45 blur-sm group-hover:opacity-85 transition-opacity" />
+        <div className="absolute inset-0 rounded-xl bg-gradient-to-tr from-[#7C3AED] via-[#8B5CF6] to-[#2563EB] opacity-50 blur-sm group-hover:opacity-90 transition-opacity" />
         
         {/* Vector SVG Emblem */}
         <div className="relative w-full h-full z-10 flex items-center justify-center">
@@ -289,7 +289,7 @@ export const Logo: React.FC<LogoProps> = ({
 
       {/* Brand Name */}
       <span
-        className={`font-heading font-extrabold ${iconDimensions.font} tracking-wide text-white group-hover:text-[#C084FC] transition-colors`}
+        className={`font-heading font-extrabold ${iconDimensions.font} tracking-wide text-white group-hover:text-[#38BDF8] transition-colors`}
       >
         {name}
       </span>

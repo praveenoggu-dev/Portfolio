@@ -79,16 +79,16 @@ export const About: React.FC<AboutProps> = ({ data, onDownloadCV }) => {
 
           {/* Right Visual Image */}
           <div className="lg:col-span-6 relative flex justify-center items-center">
-            {/* Ambient Royal Purple Aura */}
-            <div className="absolute -inset-2 bg-gradient-to-tr from-[#7C3AED]/35 via-[#8B5CF6]/30 to-[#C084FC]/25 rounded-3xl blur-2xl -z-10 animate-pulse-glow" />
+            {/* Ambient Purple & Blue Mixed Aura */}
+            <div className="absolute -inset-2 bg-gradient-to-tr from-[#7C3AED]/35 via-[#2563EB]/30 to-[#38BDF8]/25 rounded-3xl blur-2xl -z-10 animate-pulse-glow" />
 
-            <div className="relative w-full max-w-lg aspect-[4/3] rounded-3xl overflow-hidden border-2 border-[#8B5CF6]/60 shadow-2xl shadow-black/80 glow-card group">
+            <div className="relative w-full max-w-lg aspect-[4/3] rounded-3xl overflow-hidden border-2 border-[#6366F1]/60 shadow-2xl shadow-black/80 glow-card group">
               <img
                 src={data.personal.workspaceImage}
                 alt="AI Coding Computer Screen"
                 className="w-full h-full object-cover filter brightness-95 contrast-105 group-hover:scale-105 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#070114]/60 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#06071B]/60 via-transparent to-transparent pointer-events-none" />
             </div>
           </div>
         </div>

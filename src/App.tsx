@@ -106,12 +106,12 @@ export function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#070114] text-white selection:bg-[#8B5CF6] selection:text-white font-body relative overflow-x-hidden flex flex-col justify-between">
+    <div className="min-h-screen bg-[#06071B] text-white selection:bg-[#6366F1] selection:text-white font-body relative overflow-x-hidden flex flex-col justify-between">
       {/* Pure White Starfield & Constellation Canvas */}
       <ParticleBackground />
 
       {/* Smooth Cursor Spotlight Interaction */}
-      <SpotlightGlow glowColor="rgba(139, 92, 246, 0.12)" />
+      <SpotlightGlow glowColor="rgba(99, 102, 241, 0.15)" />
 
       {/* Navigation Bar with Active Page Highlight */}
       <Navbar

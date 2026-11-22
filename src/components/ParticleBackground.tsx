@@ -67,7 +67,7 @@ export const ParticleBackground: React.FC = () => {
     const draw = () => {
       ctx.clearRect(0, 0, width, height);
 
-      // Draw pure white connection lines between nearby stars
+      // Draw soft purple-blue constellation lines between nearby stars
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x;
@@ -75,10 +75,10 @@ export const ParticleBackground: React.FC = () => {
           const dist = Math.sqrt(dx * dx + dy * dy);
 
           if (dist < 115) {
-            const lineAlpha = (1 - dist / 115) * 0.18;
+            const lineAlpha = (1 - dist / 115) * 0.22;
             ctx.beginPath();
-            ctx.strokeStyle = `rgba(255, 255, 255, ${lineAlpha})`;
-            ctx.lineWidth = 0.85;
+            ctx.strokeStyle = `rgba(165, 180, 252, ${lineAlpha})`;
+            ctx.lineWidth = 0.9;
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
             ctx.stroke();
@@ -135,10 +135,11 @@ export const ParticleBackground: React.FC = () => {
 
   return (
     <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-      {/* Deep Ambient Royal Electric Violet Glow Orbs */}
-      <div className="absolute -top-[10%] left-[20%] w-[680px] h-[680px] bg-gradient-to-br from-[#7C3AED]/22 to-[#4A0E80]/18 rounded-full blur-[150px] animate-pulse-glow" />
-      <div className="absolute top-[40%] -right-[10%] w-[580px] h-[580px] bg-gradient-to-tl from-[#9333EA]/20 to-[#6D28D9]/16 rounded-full blur-[150px] animate-aurora" />
-      <div className="absolute -bottom-[10%] left-[10%] w-[720px] h-[720px] bg-gradient-to-tr from-[#8B5CF6]/20 to-[#4C1D95]/16 rounded-full blur-[160px] animate-pulse-glow" />
+      {/* Deep Ambient Cosmic Dual-Glow Orbs (Purple & Blue Mixed) */}
+      <div className="absolute -top-[12%] left-[15%] w-[720px] h-[720px] bg-gradient-to-br from-[#8B5CF6]/28 via-[#6D28D9]/20 to-[#2563EB]/22 rounded-full blur-[150px] animate-pulse-glow" />
+      <div className="absolute top-[35%] -right-[12%] w-[640px] h-[640px] bg-gradient-to-tl from-[#2563EB]/28 via-[#0284C7]/20 to-[#9333EA]/22 rounded-full blur-[160px] animate-aurora" />
+      <div className="absolute -bottom-[12%] left-[8%] w-[750px] h-[750px] bg-gradient-to-tr from-[#7C3AED]/25 via-[#3B82F6]/24 to-[#6366F1]/20 rounded-full blur-[160px] animate-pulse-glow" />
+      <div className="absolute top-[60%] left-[45%] w-[480px] h-[480px] bg-gradient-to-r from-[#8B5CF6]/18 to-[#38BDF8]/18 rounded-full blur-[140px] animate-aurora" />
 
       {/* Cybernetic Dot Matrix Grid Pattern */}
       <div className="absolute inset-0 bg-dots-pattern opacity-40 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black_80%)]" />

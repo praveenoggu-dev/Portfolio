@@ -97,28 +97,28 @@ export const Hero: React.FC<HeroProps> = ({ data, onNavigate }) => {
           {/* Right Visual Portrait with Floating Animations */}
           <div className="lg:col-span-5 flex justify-center lg:justify-end relative">
             <div className="relative w-72 sm:w-80 md:w-96 aspect-square flex items-center justify-center animate-float-slow">
-              {/* Vibrant Royal Electric Purple Glow Effect */}
+              {/* Vibrant Cosmic Purple & Blue Mixed Glow Effect */}
               <div
                 className="absolute inset-0 rounded-3xl blur-3xl -z-10 animate-pulse-glow"
                 style={{
-                  background: 'radial-gradient(circle, rgba(139, 92, 246, 0.45) 0%, transparent 70%)',
+                  background: 'radial-gradient(circle, rgba(139, 92, 246, 0.45) 0%, rgba(37, 99, 235, 0.35) 55%, transparent 70%)',
                 }}
               />
 
               <div
                 className="absolute inset-2 rounded-3xl border backdrop-blur-md -rotate-3 transition-transform group-hover:rotate-0"
                 style={{
-                  borderColor: 'rgba(139, 92, 246, 0.55)',
-                  backgroundColor: 'rgba(31, 5, 61, 0.45)',
+                  borderColor: 'rgba(99, 102, 241, 0.65)',
+                  background: 'linear-gradient(135deg, rgba(34, 9, 64, 0.5) 0%, rgba(13, 20, 56, 0.5) 100%)',
                 }}
               />
 
               {/* Developer Profile Card */}
               <div
-                className="relative w-full h-full rounded-3xl overflow-hidden border-2 shadow-2xl bg-[#120324]"
+                className="relative w-full h-full rounded-3xl overflow-hidden border-2 shadow-2xl bg-[#0C0F2E]"
                 style={{
                   borderColor: '#8B5CF6',
-                  boxShadow: '0 0 35px rgba(139, 92, 246, 0.35)',
+                  boxShadow: '0 0 35px rgba(139, 92, 246, 0.35), 0 0 20px rgba(37, 99, 235, 0.25)',
                 }}
               >
                 <img
@@ -127,15 +127,15 @@ export const Hero: React.FC<HeroProps> = ({ data, onNavigate }) => {
                   className="w-full h-full object-cover object-top filter brightness-100 contrast-105 hover:scale-105 transition-transform duration-700"
                 />
 
-                <div className="absolute inset-0 bg-gradient-to-t from-[#070114] via-transparent to-transparent opacity-50" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#06071B] via-transparent to-transparent opacity-50" />
               </div>
 
               {/* Floating Badge: Turning Ideas into Digital Reality */}
               <div
-                className="absolute -bottom-6 -left-6 sm:-left-10 z-20 px-5 py-3 rounded-2xl bg-[#120324]/95 backdrop-blur-xl border shadow-2xl shadow-black/70 hover:scale-105 transition-all animate-float"
-                style={{ borderColor: 'rgba(139, 92, 246, 0.6)' }}
+                className="absolute -bottom-6 -left-6 sm:-left-10 z-20 px-5 py-3 rounded-2xl bg-[#0E1133]/95 backdrop-blur-xl border shadow-2xl shadow-black/70 hover:scale-105 transition-all animate-float"
+                style={{ borderColor: 'rgba(99, 102, 241, 0.65)' }}
               >
-                <div className="text-[11px] font-semibold tracking-wider text-[#C084FC] uppercase">
+                <div className="text-[11px] font-semibold tracking-wider text-[#38BDF8] uppercase">
                   Turning Ideas
                 </div>
                 <div className="text-xs sm:text-sm font-bold text-white">
