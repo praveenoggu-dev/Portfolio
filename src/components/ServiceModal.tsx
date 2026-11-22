@@ -36,20 +36,20 @@ export const ServiceModal: React.FC<ServiceModalProps> = ({
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/85 backdrop-blur-md animate-in fade-in duration-200">
       <div
-        className="relative w-full max-w-2xl bg-[#16032E] border border-[#4A1278] rounded-3xl overflow-hidden shadow-2xl flex flex-col max-h-[90vh]"
+        className="relative w-full max-w-2xl bg-[#130B26] border border-[#2C1B4D] rounded-3xl overflow-hidden shadow-2xl flex flex-col max-h-[90vh]"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 z-20 w-9 h-9 rounded-full bg-[#070114]/85 text-[#C4B5FD] hover:text-white border border-[#4A1278] flex items-center justify-center transition-all hover:scale-105 cursor-pointer"
+          className="absolute top-4 right-4 z-20 w-9 h-9 rounded-full bg-[#090514]/85 text-[#A78BFA] hover:text-white border border-[#2C1B4D] flex items-center justify-center transition-all hover:scale-105 cursor-pointer"
         >
           <X size={18} />
         </button>
 
         {/* Modal Header */}
-        <div className="p-6 sm:p-8 border-b border-[#4A1278] flex items-start gap-5 bg-gradient-to-r from-[#1F053D] to-[#16032E]">
-          <div className="w-16 h-16 rounded-2xl bg-[#070114] border border-[#8B5CF6]/60 flex items-center justify-center shrink-0 shadow-lg shadow-[#8B5CF6]/30">
+        <div className="p-6 sm:p-8 border-b border-[#2C1B4D] flex items-start gap-5 bg-gradient-to-r from-[#150D2A] to-[#130B26]">
+          <div className="w-16 h-16 rounded-2xl bg-[#090514] border border-[#A855F7]/50 flex items-center justify-center shrink-0 shadow-lg shadow-[#A855F7]/25">
             {getIcon(service.iconName)}
           </div>
           <div>
@@ -59,7 +59,7 @@ export const ServiceModal: React.FC<ServiceModalProps> = ({
             <h3 className="text-2xl font-heading font-extrabold text-white mt-1">
               {service.title}
             </h3>
-            <p className="text-xs sm:text-sm text-[#C4B5FD] mt-1 leading-relaxed">
+            <p className="text-xs sm:text-sm text-[#A78BFA] mt-1 leading-relaxed">
               {service.description}
             </p>
           </div>
@@ -77,7 +77,7 @@ export const ServiceModal: React.FC<ServiceModalProps> = ({
                 {service.features.map((feature, idx) => (
                   <div
                     key={idx}
-                    className="flex items-start gap-3 p-3 rounded-xl bg-[#070114]/70 border border-[#4A1278]"
+                    className="flex items-start gap-3 p-3 rounded-xl bg-[#090514]/70 border border-[#2C1B4D]"
                   >
                     <CheckCircle2 size={16} className="text-[#C084FC] shrink-0 mt-0.5" />
                     <span className="text-xs sm:text-sm text-[#E2E8F0]">
@@ -99,7 +99,7 @@ export const ServiceModal: React.FC<ServiceModalProps> = ({
                 {service.technologies.map((tech) => (
                   <span
                     key={tech}
-                    className="px-3 py-1 rounded-lg bg-[#2E0859] border border-[#4A1278] text-xs font-medium text-white"
+                    className="px-3 py-1 rounded-lg bg-[#1D123A] border border-[#2C1B4D] text-xs font-medium text-white"
                   >
                     {tech}
                   </span>
@@ -109,8 +109,8 @@ export const ServiceModal: React.FC<ServiceModalProps> = ({
           )}
 
           {/* Action CTA */}
-          <div className="pt-4 border-t border-[#4A1278] flex flex-wrap items-center justify-between gap-4">
-            <div className="text-xs text-[#C4B5FD]">
+          <div className="pt-4 border-t border-[#2C1B4D] flex flex-wrap items-center justify-between gap-4">
+            <div className="text-xs text-[#A78BFA]">
               Ready to start your project? Let's discuss your requirements.
             </div>
             <button

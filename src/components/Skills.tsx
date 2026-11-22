@@ -149,7 +149,7 @@ export const Skills: React.FC<SkillsProps> = ({ skills }) => {
   };
 
   return (
-    <section id="skills" className="pt-32 sm:pt-40 pb-24 relative bg-[#070114]/50 backdrop-blur-sm">
+    <section id="skills" className="pt-32 sm:pt-40 pb-24 relative bg-[#0A0618]/40 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-14">
@@ -159,7 +159,7 @@ export const Skills: React.FC<SkillsProps> = ({ skills }) => {
           <h2 className="text-3xl sm:text-4xl font-heading font-extrabold text-white mt-2">
             My Skills
           </h2>
-          <p className="text-sm sm:text-base text-[#C4B5FD] mt-3">
+          <p className="text-sm sm:text-base text-[#A78BFA] mt-3">
             Core programming languages, web technologies, and databases I work with.
           </p>
         </div>
@@ -172,7 +172,7 @@ export const Skills: React.FC<SkillsProps> = ({ skills }) => {
               className="glow-card rounded-2xl p-6 flex flex-col items-center justify-center text-center relative group hover:-translate-y-1.5 transition-all duration-300 min-h-[160px]"
             >
               {/* Skill Icon Container */}
-              <div className="w-16 h-16 rounded-2xl bg-[#1F053D] border border-[#4A1278] flex items-center justify-center mb-4 group-hover:border-[#8B5CF6]/70 group-hover:scale-110 group-hover:shadow-[0_0_22px_rgba(139,92,246,0.4)] transition-all shadow-inner">
+              <div className="w-16 h-16 rounded-2xl bg-[#150D2A] border border-[#2C1B4D] flex items-center justify-center mb-4 group-hover:border-[#A855F7]/60 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(168,85,247,0.3)] transition-all shadow-inner">
                 {renderSkillIcon(skill.name, skill.icon)}
               </div>
 

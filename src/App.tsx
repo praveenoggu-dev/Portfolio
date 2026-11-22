@@ -106,12 +106,12 @@ export function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#06071B] text-white selection:bg-[#6366F1] selection:text-white font-body relative overflow-x-hidden flex flex-col justify-between">
+    <div className="min-h-screen bg-[#090514] text-white selection:bg-[#A855F7] selection:text-white font-body relative overflow-x-hidden flex flex-col justify-between">
       {/* Pure White Starfield & Constellation Canvas */}
       <ParticleBackground />
 
       {/* Smooth Cursor Spotlight Interaction */}
-      <SpotlightGlow glowColor="rgba(99, 102, 241, 0.15)" />
+      <SpotlightGlow glowColor="rgba(168, 85, 247, 0.08)" />
 
       {/* Navigation Bar with Active Page Highlight */}
       <Navbar
@@ -159,7 +159,7 @@ export function App() {
                           Discover my journey, background, and dedication to building modern, performant digital solutions.
                         </p>
                       </div>
-                      <div className="pt-6 mt-4 border-t border-[#4A1278]/60 flex items-center justify-between text-xs font-semibold text-[#C084FC] group-hover:text-white transition-colors">
+                      <div className="pt-6 mt-4 border-t border-[#2C1B4D]/60 flex items-center justify-between text-xs font-semibold text-[#C084FC] group-hover:text-white transition-colors">
                         <span>Read Biography</span>
                         <ArrowRight size={14} className="group-hover:translate-x-1.5 transition-transform" />
                       </div>
@@ -181,7 +181,7 @@ export function App() {
                           Explore my core tech stack: C, Java, Python, HTML, CSS, JavaScript, React.js, PHP, and MySQL.
                         </p>
                       </div>
-                      <div className="pt-6 mt-4 border-t border-[#4A1278]/60 flex items-center justify-between text-xs font-semibold text-[#C084FC] group-hover:text-white transition-colors">
+                      <div className="pt-6 mt-4 border-t border-[#2C1B4D]/60 flex items-center justify-between text-xs font-semibold text-[#C084FC] group-hover:text-white transition-colors">
                         <span>View 9 Skills</span>
                         <ArrowRight size={14} className="group-hover:translate-x-1.5 transition-transform" />
                       </div>
@@ -203,7 +203,7 @@ export function App() {
                           Browse full-stack websites, e-commerce stores, and UI/UX dashboards with live interactive details.
                         </p>
                       </div>
-                      <div className="pt-6 mt-4 border-t border-[#4A1278]/60 flex items-center justify-between text-xs font-semibold text-[#C084FC] group-hover:text-white transition-colors">
+                      <div className="pt-6 mt-4 border-t border-[#2C1B4D]/60 flex items-center justify-between text-xs font-semibold text-[#C084FC] group-hover:text-white transition-colors">
                         <span>Explore Projects</span>
                         <ArrowRight size={14} className="group-hover:translate-x-1.5 transition-transform" />
                       </div>

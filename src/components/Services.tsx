@@ -42,11 +42,11 @@ export const Services: React.FC<ServicesProps> = ({ services, onSelectService })
             <div
               key={service.id}
               onClick={() => onSelectService(service)}
-              className="glow-card rounded-2xl p-7 flex flex-col justify-between group cursor-pointer hover:border-[#8B5CF6]/70 transition-all duration-300"
+              className="glow-card rounded-2xl p-7 flex flex-col justify-between group cursor-pointer hover:border-[#A855F7]/60 transition-all duration-300"
             >
               <div>
                 {/* Icon Box */}
-                <div className="w-14 h-14 rounded-2xl bg-[#1F053D] border border-[#4A1278] flex items-center justify-center mb-6 group-hover:border-[#8B5CF6]/70 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-[#8B5CF6]/35 transition-all">
+                <div className="w-14 h-14 rounded-2xl bg-[#150D2A] border border-[#2C1B4D] flex items-center justify-center mb-6 group-hover:border-[#A855F7]/60 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-[#A855F7]/30 transition-all">
                   {getIcon(service.iconName)}
                 </div>
 
@@ -54,13 +54,13 @@ export const Services: React.FC<ServicesProps> = ({ services, onSelectService })
                   {service.title}
                 </h3>
 
-                <p className="text-sm text-[#C4B5FD]/85 leading-relaxed">
+                <p className="text-sm text-[#A78BFA]/80 leading-relaxed">
                   {service.description}
                 </p>
               </div>
 
               {/* Bottom Subtle Indicator */}
-              <div className="pt-6 mt-4 border-t border-[#4A1278]/60 flex items-center justify-between text-xs font-semibold text-[#C4B5FD] group-hover:text-[#C084FC] transition-colors">
+              <div className="pt-6 mt-4 border-t border-[#2C1B4D]/60 flex items-center justify-between text-xs font-semibold text-[#A78BFA] group-hover:text-[#C084FC] transition-colors">
                 <span>Learn more</span>
                 <ArrowRight size={14} className="group-hover:translate-x-1.5 transition-transform" />
               </div>

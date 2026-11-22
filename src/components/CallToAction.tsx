@@ -15,9 +15,9 @@ export const CallToAction: React.FC<CallToActionProps> = ({ onContactClick }) =>
           alt="Mountains horizon"
           className="w-full h-full object-cover filter brightness-[0.38] contrast-125 saturate-150"
         />
-        {/* Ambient Royal Purple Horizon Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#070114] via-[#1F053D]/80 to-[#070114]" />
-        <div className="absolute inset-0 bg-[#8B5CF6]/20 mix-blend-overlay" />
+        {/* Ambient Lavender Horizon Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#090514] via-[#150D2A]/75 to-[#090514]" />
+        <div className="absolute inset-0 bg-[#A855F7]/15 mix-blend-overlay" />
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

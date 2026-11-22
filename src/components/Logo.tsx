@@ -206,13 +206,13 @@ export const Logo: React.FC<LogoProps> = ({
           >
             <defs>
               <linearGradient id="bracketGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#DDD6FE" />
+                <stop offset="0%" stopColor="#E9D5FF" />
                 <stop offset="50%" stopColor="#C084FC" />
-                <stop offset="100%" stopColor="#8B5CF6" />
+                <stop offset="100%" stopColor="#A855F7" />
               </linearGradient>
               <linearGradient id="badgeBg" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#3B0764" />
-                <stop offset="100%" stopColor="#160228" />
+                <stop offset="0%" stopColor="#2A1647" />
+                <stop offset="100%" stopColor="#140927" />
               </linearGradient>
             </defs>
             {/* Modern squircle badge background */}
@@ -223,14 +223,14 @@ export const Logo: React.FC<LogoProps> = ({
               height="36"
               rx="11"
               fill="url(#badgeBg)"
-              stroke="#4A1278"
+              stroke="#3F2370"
               strokeWidth="1.5"
-              className="group-hover:stroke-[#8B5CF6] transition-all"
+              className="group-hover:stroke-[#A855F7] transition-all"
             />
             {/* Left Bracket < */}
             <path
               d="M9 15L5 20L9 25"
-              stroke="#8B5CF6"
+              stroke="#A855F7"
               strokeWidth="2.2"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -276,10 +276,10 @@ export const Logo: React.FC<LogoProps> = ({
     <div className={`flex items-center gap-3 group cursor-pointer ${className}`}>
       {/* Logo Icon Container */}
       <div
-        className={`${iconDimensions.box} relative rounded-xl flex items-center justify-center shadow-lg shadow-[#8B5CF6]/30 group-hover:shadow-[#38BDF8]/45 group-hover:scale-105 transition-all duration-300`}
+        className={`${iconDimensions.box} relative rounded-xl flex items-center justify-center shadow-lg shadow-[#A855F7]/25 group-hover:shadow-[#C084FC]/40 group-hover:scale-105 transition-all duration-300`}
       >
         {/* Ambient background glow */}
-        <div className="absolute inset-0 rounded-xl bg-gradient-to-tr from-[#7C3AED] via-[#8B5CF6] to-[#2563EB] opacity-50 blur-sm group-hover:opacity-90 transition-opacity" />
+        <div className="absolute inset-0 rounded-xl bg-gradient-to-tr from-[#9333EA] to-[#C084FC] opacity-40 blur-sm group-hover:opacity-75 transition-opacity" />
         
         {/* Vector SVG Emblem */}
         <div className="relative w-full h-full z-10 flex items-center justify-center">
@@ -289,7 +289,7 @@ export const Logo: React.FC<LogoProps> = ({
 
       {/* Brand Name */}
       <span
-        className={`font-heading font-extrabold ${iconDimensions.font} tracking-wide text-white group-hover:text-[#38BDF8] transition-colors`}
+        className={`font-heading font-extrabold ${iconDimensions.font} tracking-wide text-white group-hover:text-[#C084FC] transition-colors`}
       >
         {name}
       </span>
